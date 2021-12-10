@@ -102,11 +102,15 @@ Activity의 서브 클래스는 **생명주기 콜백(lifecycle callback)**들�
 - **ViewModel** 
 	- viewModel 클래스는 JetPack의 lifecycle-extensions 라이브러리에 포함되어 제공
 	- 책과 다르게 현재 지원이 중단되어있으므로 lifecycle-viewmodel을 사용하였음.
+	![image](https://user-images.githubusercontent.com/68258365/145585279-e00ea3be-fcf8-4744-b6f6-1915e7cfe54e.png)
+
 	- 모델 데이터를 화면에 보여주는 기능을 수행.
 	- androidx.lifecycle 패키지의 일부, 생명주기를 고려하여 작동하는 컴포넌트(11장,25장)
 	- ViewModel의 서브클래스를 생성하고(상속하는 것을 의미?) MainActivity와 연결
 	- 구성 변경이 생겨도 계속 존재하다가 액티비티가 종료될 때 소멸
 	- 장치 회전 시 액티비티 인스턴스는 소멸되지만 ViewModel인스턴스는  메모리에 남음.
+	 ![image](https://user-images.githubusercontent.com/68258365/145585320-45d131c9-bc2d-4c2b-81a1-ad88de893c3d.png)
+
 	
 	
 
