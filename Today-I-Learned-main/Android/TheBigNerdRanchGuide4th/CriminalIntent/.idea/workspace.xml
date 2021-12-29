@@ -28,15 +28,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec2be461-67ac-442f-99a6-a2933d82ef94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_solved.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_solved.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_solved.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_solved.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_solved.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/CrimeRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/CriminalIntentApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/database/CrimeDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/database/CrimeDatabase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/database/CrimeTypeConverters.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/CrimeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/CrimeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/Crime.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/Crime.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/CrimeListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/CrimeListFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item_crime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_item_crime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/CrimeListViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/criminalintent/CrimeListViewModel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +55,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Data Class" />
-        <option value="Kotlin Class" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -74,6 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android-custom-viewC:/Users/ko_su/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AndroidBNR4-main/AndroidBNR4-main/Ch11/databases" />
     <property name="multi-representation-previewC:/Users/ko_su/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
@@ -182,22 +185,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1640598664905" />
-    <state width="1476" height="166" key="GridCell.Tab.0.bottom" timestamp="1640696912872">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1640744501619">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="166" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640696912872" />
-    <state width="1476" height="166" key="GridCell.Tab.0.center" timestamp="1640696912872">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1640744501619" />
+    <state width="1476" height="199" key="GridCell.Tab.0.bottom" timestamp="1640743501624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="166" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1640696912872" />
-    <state width="1476" height="166" key="GridCell.Tab.0.left" timestamp="1640696912871">
+    <state width="1476" height="199" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640743501624" />
+    <state width="1476" height="199" key="GridCell.Tab.0.center" timestamp="1640743501624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="166" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1640696912871" />
-    <state width="1476" height="166" key="GridCell.Tab.0.right" timestamp="1640696912872">
+    <state width="1476" height="199" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1640743501624" />
+    <state width="1476" height="199" key="GridCell.Tab.0.left" timestamp="1640743501624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="166" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1640696912872" />
+    <state width="1476" height="199" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1640743501624" />
+    <state width="1476" height="199" key="GridCell.Tab.0.right" timestamp="1640743501624">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1476" height="199" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1640743501624" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1640600195710">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
