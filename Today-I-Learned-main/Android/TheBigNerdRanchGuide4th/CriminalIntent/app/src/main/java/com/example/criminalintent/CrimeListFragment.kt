@@ -1,6 +1,7 @@
 package com.example.criminalintent
 
 import android.content.ContentValues.TAG
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,8 +15,19 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.*
 
 class CrimeListFragment : Fragment() {
+
+    /**
+     * 호스팅 액티비티에서 구현할 인터페이스
+     */
+    interface Callbacks{
+        fun onCrimeSelected(crimeId: UUID)
+    }
+
+    private var callbacks: Callbacks? = null //콜백 구현 객체 참조
+
     private lateinit var crimeRecyclerView: RecyclerView
 //    private var adapter: CrimeAdapter? = null
     private var adapter : CrimeAdapter? = CrimeAdapter(emptyList())
@@ -27,6 +39,11 @@ class CrimeListFragment : Fragment() {
 //        super.onCreate(savedInstanceState)
 //        Log.d(TAG, "Total crimes: ${crimeListViewModel.crimes.size}")
 //    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        callbacks = context as Callbacks?
+    }
 
 
     override fun onCreateView(
@@ -57,6 +74,11 @@ class CrimeListFragment : Fragment() {
                 }
             }
         )
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        callbacks = null
     }
 
 //    private fun updateUI() {
@@ -99,8 +121,9 @@ class CrimeListFragment : Fragment() {
         }
 
         override fun onClick(v: View) {
-            Toast.makeText(context, "${crime.title} pressed!", Toast.LENGTH_SHORT)
-                .show()
+//            Toast.makeText(context, "${crime.title} pressed!", Toast.LENGTH_SHORT)
+//                .show()
+            callbacks?.onCrimeSelected(crime.id)
         }
     }
 
