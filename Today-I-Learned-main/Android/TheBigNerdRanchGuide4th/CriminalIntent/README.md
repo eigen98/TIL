@@ -160,6 +160,13 @@ CrimeListFragment와 CrimeFragment 두 프래그먼트가 존재
 
 호스팅 액티비티 FragmentManager에서 새로운 프래그먼트의 트랜잭션을 시작하는 코드를 추가(뷰홀더 onClick 안에).
 
+	fun onClick(view: View){
+		val fragment = CrimeFragment.newInstance(crime.id)
+		val fm = activity.supportFragmentManager
+		fm.beginTransaction()
+			.replace(R.id.fragment_container, fragment)
+			.commit
+
 ->프래그먼트가 독자적이고 구성가능한 단위가 아님(프래그먼트의 독립성)
 
 -> 다른 **프래그먼트로 교체하는일**을 액티비티가 아닌 **프래그먼트**에서 해야함. 
@@ -190,6 +197,50 @@ CrimeListFragment와 CrimeFragment 두 프래그먼트가 존재
 ->호스팅 액티비티는 반드시 Callbacks인터페이스를 구현해야함.(이러한 중요한 내용은 반드시 문서화)
 
 - 호스팅 액티비티에 인터페이스의 함수를 구현.
+
+
+
+	class CrimeListFragment : Fragment() {
+
+	    /**
+	     * 호스팅 액티비티에서 구현할 인터페이스
+	     */
+	    interface Callbacks{
+		fun onCrimeSelected(crimeId: UUID)
+	    }
+
+	    private var callbacks: Callbacks? = null //콜백 구현 객체 참조
+
+	    private lateinit var crimeRecyclerView: RecyclerView
+		//    private var adapter: CrimeAdapter? = null
+	    private var adapter : CrimeAdapter? = CrimeAdapter(emptyList())
+	    private val crimeListViewModel: CrimeListViewModel by lazy {
+		ViewModelProvider(this).get(CrimeListViewModel::class.java)
+	    }
+
+		//    override fun onCreate(savedInstanceState: Bundle?) {
+		//        super.onCreate(savedInstanceState)
+		//        Log.d(TAG, "Total crimes: ${crimeListViewModel.crimes.size}")
+		//    }
+
+	    override fun onAttach(context: Context) {
+		super.onAttach(context)
+		callbacks = context as Callbacks?
+	    }
+
+	    override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+		setHasOptionsMenu(true)
+	    }
+
+
+		...
+
+	    override fun onDetach() {
+		super.onDetach()
+		callbacks = null
+	    }
+
 
 ### 프래그먼트 교체하기
 -----
