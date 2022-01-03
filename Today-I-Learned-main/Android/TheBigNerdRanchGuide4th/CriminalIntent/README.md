@@ -141,3 +141,240 @@ LiveData로 반환될 때 프래그먼트에서 Observer 사용
 LiveData.observer함수는 LiveData인스턴스에 옵저버를 등록하기위해 사용.
 
 
+
+
+# chapter12 프래그먼트
+
+이 챕터에서 CriminalIntent 앱의 범죄 리스트와 상세내역을 연동하였습니다.
+
+CrimeListFragment와 CrimeFragment 두 프래그먼트가 존재
+
+**할일**
+- 호스팅 액티비티가 프래그먼트들을 바꿔치기해서 이동 구현 방법.
+
+- 프래그먼트 인자(fragment argument)사용
+- 프래그먼트 인스턴스에게 데이터를 전달하는 방법
+- UI 변경에 따라 LiveData를 변환하는 방법.
+
+### 단일 액티비티 : 프래그먼트의 우두머리
+
+호스팅 액티비티 FragmentManager에서 새로운 프래그먼트의 트랜잭션을 시작하는 코드를 추가(뷰홀더 onClick 안에).
+
+->프래그먼트가 독자적이고 구성가능한 단위가 아님(프래그먼트의 독립성)
+
+-> 다른 **프래그먼트로 교체하는일**을 액티비티가 아닌 **프래그먼트**에서 해야함. 
+	
+- 프래그먼트에 Callback 인터페이스를 정의
+- 호스팅 액티비티가 해당 콜백 인터페이스를 구현해 프래그먼트 교체를 수행하게 한다.
+
+### 프래그먼트 콜백 인터페이스
+------------
+- 프래그먼트 교체 기능을 호스팅 액티비티에 위임.
+
+> 프래그먼트에 Callback이라는 커스텀 콜백 인터페이스 정의
+
+-> 이로서 어떤 액티비티가 호스팅하는지 알 필요없이 프래그먼트가 **자신을 호스팅하는 액티비티의 함수**들을 호출할 수 있다.
+
+>  - Callback 인터페이스를 선언
+>  
+>  - Callbacks를 구현하는 객체 참조를 저장하기 위해 callbacks 속성 추가.
+>  
+> - onAttach와 onDetach를 오버라이드 해 callbacks속성을 설정 또는 해제 한다.
+	> 
+**onAttach** 
+	
+	프래그먼트가 호스팅 액티비티에 연결될 때 호출 
+	호스팅하는 액티비티 인스턴스가 Context객체(Activity는 Context의 서브 클래스다.)
+
+- Context객체의 참조를 fragment.Callbacks타입으로 변환. 
+->호스팅 액티비티는 반드시 Callbacks인터페이스를 구현해야함.(이러한 중요한 내용은 반드시 문서화)
+
+- 호스팅 액티비티에 인터페이스의 함수를 구현.
+
+### 프래그먼트 교체하기
+-----
+
+FragmentTransaction.replace(Int, Fragment)는 액티비티에 현재 호스팅된 프래그먼트를 두번째 인자로 전달 된 프래그먼트로 교체. 없으면 새로운 프래그먼트 추가.
+
+- 프래그먼트 교체 트랜잭션을 백 스택에 추가해서 구현.
+	
+		.addToBackStrack(null)
+		해당 트랜잭션이 취소되면서 이전상태로 복원.
+
+### 프래그먼트 인자
+----
+Fragment 인스턴스 교체시 데이터 전달 방법 -> Fragment argument
+프로그먼트에 속하는 어딘가(arguement bundle)에 데이터를 저장할 수 있음.
+프래그먼트는 부모 액티비티나 다른 외부 소스에 의존하지 않고 인자번들로부터 데이터를 가져올 수 있음.
+
+프래그먼트의 캡슐화를 도와줌 재사용할 수 있는 구성요소가 되며 어떤 액티비티에도 쉽게 호스팅.
+
+```mermaid
+graph LR
+A[Bundle객체 생성] -- put함수 활용 --> B(인자를 객체에 추가)
+
+```
+### 인자를 프래그먼트에 추가하기
+---
+인자 번들을 프래그먼트에 추가할 때 Fragment.setArguments(Bundle)을 호출.
+단 해당 프래그먼트가 액티비티에 추가되기 전에 첨부
+-> 동반객체 newInstance를 Fragment 클래스에 추가하여 프래그먼트 인스턴스와 번들 인스턴스를 생성 후 번들 인스턴스에 인자를 저장 후 프래그먼트 인자로 첨부.
+호스팅 액티비티가 프래그먼트 생성자를 직접 호출 X,
+newInstance호출
+
+	companion object{  
+	    fun newInstance(crimeId : UUID) : CrimeFragment{  
+	        val args = Bundle().apply {  
+	  putSerializable(ARG_CRIME_ID,crimeId)  
+	        }  
+	  return CrimeFragment().apply {  
+	  arguments = args  
+	        }  
+	  }  
+	}
+
+### 프래그먼트 인자 가져오기
+---
+프래그먼트가 자신에게 전달된 인자를 액세스
+-> 프래그먼트 클래스의 arguments 속성 참조, get함수 호출
+
+	override fun onCreate(savedInstanceState: Bundle?) {  
+	    super.onCreate(savedInstanceState)  
+	    crime = Crime()  
+	    
+	    val crimeId : UUID = arguments?.getSerializable(ARG_CRIME_ID) as UUID  
+	 
+	    //궁극적으로는 데이터베이스로부터 데이터를 로드해야한다.  
+	 
+	}
+
+
+### 상세내역 화면에 보여줄 객체를 LiveData 변환으로 얻기
+	class CrimeDetailViewModel :ViewModel() {  
+	    private val crimeRepository = CrimeRepository.get()  
+	    private val crimeIdLiveData = MutableLiveData<UUID>()  
+	  
+	    var crimeLiveData : LiveData<Crime?> =  
+	            Transformations.switchMap(crimeIdLiveData){ crimeId ->  
+	  crimeRepository.getCrime(crimeId)  
+	            }  
+	  fun loadCrime(crimeId:UUID){  
+	        crimeIdLiveData.value = crimeId  
+	    }  
+	    fun saveCrime(crime : Crime){  
+	        crimeRepository.updateCrime(crime)  
+	    }  
+	}
+자주 사용하는 crimeRepository 는 CrimeRepository 인스턴스 참조 보존.
+ crimeLiveData 속성은 Crime객체를 저장한 LiveData를 참조하며 LiveData는 Transformations.switchMap(crimeIdLiveData){}로 반환.
+ switchMap(crimeIdLiveData)은 
+ 
+ **Transformations** 클래스는 두 LiveData객체 간 변환을 해주는 함수들 포함.switchMap(LiveData<X>, Function<X, LiveData<Y>!>) 
+ 첫번 째 인자로 전달된 LiveData의 값에 대해 두번 째 인자의 함수로 변환하여 LiveData로 반환.
+
+loadCrime(UUID)를 활용해 CrimeFragment를 CrimeDetailViewModel과 연결
+
+	 class CrimeFragment : Fragment() {
+
+		private val crimeDetailViewModel:CrimeDetailViewModel by lazy {  
+		  ViewModelProvider(this).get(CrimeDetailViewModel::class.java)  
+		}
+		
+		override fun onCreate(savedInstanceState: Bundle?) {  
+		    super.onCreate(savedInstanceState)  
+		    crime = Crime()  
+		    val crimeId : UUID = arguments?.getSerializable(ARG_CRIME_ID) as UUID  
+		    Log.d(TAG, "args bundle crime ID : $crimeId")  
+		    //궁극적으로는 데이터베이스로부터 데이터를 로드해야한다.  
+		  crimeDetailViewModel.loadCrime(crimeId)  
+		}
+	}
+	
+CrimeDetailViewModel의 crimeLiveData가 변경되는지 관찰되도록
+Observer사용
+
+	
+	class CrimeFragment : Fragment(){
+		...
+		
+
+		override fun onViewCreated(view: View, savedInstanceState: Bundle?) {  
+		    super.onViewCreated(view, savedInstanceState)  
+		    crimeDetailViewModel.crimeLiveData.observe(  
+		            viewLifecycleOwner,  
+					Observer{ crime ->  
+					  crime?.let {  
+						  this.crime = crime  
+		                  updateUI()  
+		                }  
+		 }  )  
+		}
+		
+		...
+
+		private fun updateUI(){  
+		    titleField.setText(crime.title)  
+		    dateButton.text = crime.date.toString()  
+		    solvedCheckBox.apply {  
+		  isChecked = crime.isSolved  
+		  jumpDrawablesToCurrentState() //애니메이션 생략  
+		  }  
+		  
+		  if(crime.suspect.isNotEmpty()){  
+		        suspectButton.text = crime.suspect  
+		  }  
+		}
+
+
+	...
+	}
+
+### 데이터베이스 변경하기
+---
+화면을 벗어날 때 사용자가 변경한 데이터를 데이터베이스에 저장.
+데이터를 변경하는 함수와 추가하는 함수를 Dao에 추가
+	@Dao  
+	interface CrimeDao {  
+	  
+	    @Query("SELECT * FROM crime")  
+	    //fun getCrimes() : List<Crime>  
+	  fun getCrimes() : LiveData<List<Crime>>  
+	  
+	    @Query("SELECT * FROM crime WHERE id=(:id)")  
+	    //fun getCrime( id: UUID):Crime?  
+	  fun getCrime( id: UUID):LiveData<Crime?>  
+	  
+	    @Update  
+	  fun updateCrime(crime:Crime)  
+	  
+	    @Insert  
+	  fun addCrime(crime: Crime)  
+	  
+	}
+### Executors 사용하기
+---
+Executors는 스레드를 참조하는 객체
+**Executors인스턴스를 생성하면 새로운 백그라운드 스레드를 사용해 블록의 코드를 실행**
+
+	class CrimeRepository private constructor(context : Context){
+	
+		private val executor = Executors.newSingleThreadExecutor()
+
+	...
+		fun updateCrime(crime : Crime){  
+		    executor.execute{  
+		  crimeDao.updateCrime(crime)  
+		    }  
+		}  
+		fun addCrime(crime : Crime){  
+		    executor.execute{  
+		  crimeDao.addCrime(crime)  
+		    }  
+		}
+
+	...
+	}
+	
+newSingleThreadExecutor() 함수는 새로운 스레드를 참조하는 executors 인스턴스 반환
+이 인스턴스를 사용하는 작업은 main스레드와 별개로 수행되므로 UI를 방해하지않음
+
