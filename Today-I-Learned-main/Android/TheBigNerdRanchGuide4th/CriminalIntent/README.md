@@ -242,6 +242,43 @@ CrimeListFragment와 CrimeFragment 두 프래그먼트가 존재
 	    }
 
 
+호스팅 액티비티에서 콜백 인터페이스 구현하기
+
+		class MainActivity : AppCompatActivity(), CrimeListFragment.Callbacks {
+
+
+		    override fun onCreate(savedInstanceState: Bundle?) {
+			super.onCreate(savedInstanceState)
+			setContentView(R.layout.activity_main)
+
+			val currentFragment =
+			    supportFragmentManager.findFragmentById(R.id.fragment_container)
+
+			if (currentFragment == null) {
+			    val fragment = CrimeListFragment.newInstance()
+			    supportFragmentManager
+				.beginTransaction()
+				.add(R.id.fragment_container, fragment)
+				.commit()
+			}
+		    }
+
+		    //인터페이스 구현
+		    override fun onCrimeSelected(crimeId: UUID) {
+
+			supportFragmentManager
+				.beginTransaction()
+				.replace(R.id.fragment_container, fragment)
+				.addToBackStack(null)
+				.commit()
+		    }
+
+		}
+
+
+
+
+
 ### 프래그먼트 교체하기
 -----
 
