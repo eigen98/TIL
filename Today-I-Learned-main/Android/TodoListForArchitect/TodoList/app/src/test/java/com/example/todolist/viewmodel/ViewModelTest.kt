@@ -1,7 +1,9 @@
 package com.example.todolist.viewmodel
 
 import android.app.Application
+import androidx.lifecycle.LiveData
 import com.example.todolist.di.appTestModule
+import com.example.todolist.livedata.LiveDataTestObserver
 import kotlinx.coroutines.*
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.resetMain
@@ -22,7 +24,7 @@ import org.mockito.junit.MockitoJUnit
 import org.mockito.junit.MockitoRule
 
 @ExperimentalCoroutinesApi
-internal class ViewModelTest : KoinTest {
+internal abstract class ViewModelTest : KoinTest {
     //코루틴을 이용할 것임
 
     @get:Rule
@@ -53,6 +55,14 @@ internal class ViewModelTest : KoinTest {
     fun tearDown(){
         stopKoin() //코인을 멈춤
         Dispatchers.resetMain() //Maindispatcher를 초기화 해주어야 메모리 누수가 발생하지 않는다.
+
+    }
+
+    //테스트 코드 구축
+    protected fun <T> LiveData<T>.test(): LiveDataTestObserver<T> {
+        val testObserver = LiveDataTestObserver<T>()
+        observeForever(testObserver)
+        return testObserver
     }
 
 
