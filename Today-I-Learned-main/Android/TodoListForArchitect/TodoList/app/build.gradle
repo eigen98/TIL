@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 32
-    buildToolsVersion "31.0.3"
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.todolist"
         minSdkVersion 23
-        targetSdkVersion 32
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -51,7 +51,7 @@ dependencies {
     implementation "org.koin:koin-android-ext:2.1.5"
     testImplementation "org.koin:koin-test:2.1.5"
 
-    implementation 'org.mockito:mochito-inline:3.4.0'
+    implementation 'org.mockito:mockito-inline:3.4.0'
     implementation 'android.arch.core:core-testing:1.1.1'
 
     //Coroutines
