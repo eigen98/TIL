@@ -26,6 +26,7 @@ internal abstract class BaseFragment<VM: BaseViewModel, VB: ViewBinding>: Fragme
         return binding.root
     }
 
+    //create되면
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         fetchJob = viewModel.fetchData()

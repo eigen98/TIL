@@ -10,7 +10,16 @@ class DefaultProductRepository(
     private val ioDispatcher : CoroutineDispatcher
 ) : ProductRepository{
     override suspend fun getProductList(): List<ProductEntity> = withContext(ioDispatcher) {
-        TODO("Not yet implemented")
+        //위의 api를 가져다가 getProducts라는 API를 호출해주는 방식
+        //이는 레트로핏2의 response인 것을 알 수가 있음. 이것을 호출할시에 response가 성공했는지
+        val response = productApi.getProducts()
+        return@withContext if(response.isSuccessful){
+            //해당 response의 바디를 꺼냄. items를 꺼내고 null이면 리스트로 반환
+            response.body()?.items?.map{it.toEntity()} ?: listOf()
+        }else {
+            //success가 아닌 경우
+            listOf()
+        }
     }
 
     override suspend fun getLocalProductList(): List<ProductEntity> = withContext(ioDispatcher){

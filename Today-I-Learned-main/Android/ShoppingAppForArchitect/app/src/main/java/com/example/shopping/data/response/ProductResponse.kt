@@ -14,6 +14,7 @@ data class ProductResponse(
     val productType: String,
     val productIntroductionImage: String
 ){
+
     //함수를 추가하여
     //Entity로 바꿀 수 있는 형태로 만들어줌.
     fun toEntity():ProductEntity =

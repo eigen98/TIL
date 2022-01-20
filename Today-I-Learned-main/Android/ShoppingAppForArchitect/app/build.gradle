@@ -50,11 +50,18 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.3'
 
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+
     // koin DI
     implementation "org.koin:koin-android:2.1.5"
     implementation "org.koin:koin-android-scope:2.1.5"
     implementation "org.koin:koin-android-viewmodel:2.1.5"
     implementation "org.koin:koin-android-ext:2.1.5"
+
+    //Swipe Refresh Layout
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:30.0.3'
 
     // OkHttp3
     implementation "com.squareup.okhttp3:okhttp:4.6.0"
