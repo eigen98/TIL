@@ -1,8 +1,16 @@
 package com.example.shopping.presentation.list
 
+import android.widget.Toast
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.view.isGone
 import com.example.shopping.databinding.FragmentProductListBinding
 import com.example.shopping.databinding.FragmentProfileBinding
+import com.example.shopping.extensions.toast
 import com.example.shopping.presentation.BaseFragment
+import com.example.shopping.presentation.adapter.ProductListAdapter
+import com.example.shopping.presentation.detail.ProductDetailActivity
+import com.example.shopping.presentation.main.MainActivity
 import com.example.shopping.presentation.profile.ProfileViewModel
 import org.koin.android.ext.android.inject
 
@@ -17,6 +25,17 @@ internal class ProductListFragment : BaseFragment<ProductListViewModel,FragmentP
 
     //뷰바인딩 추가
     override fun getViewBinding(): FragmentProductListBinding = FragmentProductListBinding.inflate(layoutInflater)
+
+    //어답터 추가
+    private val adapter = ProductListAdapter()
+
+    private val startProductDetailForResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+            // TODO 성공적으로 처리 완료 이후 동작
+            if (result.resultCode == ProductDetailActivity.PRODUCT_ORDERED_RESULT_CODE) {
+                (requireActivity() as MainActivity).viewModel.refreshOrderList()
+            }
+        }
 
 
     override fun observeData() {
@@ -47,6 +66,34 @@ internal class ProductListFragment : BaseFragment<ProductListViewModel,FragmentP
             viewModel.fetchData()
         }
 
+    }
+
+    private fun handleLoadingState() = with(binding) {
+        refreshLayout.isRefreshing = true
+    }
+
+    private fun handleSuccessState(state: ProductListState.Success) = with(binding) {
+        refreshLayout.isRefreshing = false
+
+        if (state.productList.isEmpty()) {
+            emptyResultTextView.isGone = false
+            recyclerView.isGone = true
+        } else {
+            emptyResultTextView.isGone = true
+            recyclerView.isGone = false
+            adapter.setProductList(state.productList) {
+                //하나의 아이템이 클릭될 때마다 아이템 클릭에대해서 실행하는 동작을 만듬
+                // 인텐트 콜백
+                startProductDetailForResult.launch(
+                    ProductDetailActivity.newIntent(requireContext(), it.id)
+               )
+
+            }
+        }
+    }
+
+    private fun handleErrorState() {
+        Toast.makeText(requireContext(), "에러가 발생했습니다.", Toast.LENGTH_SHORT).show()
     }
 
 }

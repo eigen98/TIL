@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shopping.data.entity.product.ProductEntity
+import com.example.shopping.databinding.ViewholderProductItemBinding
+import com.example.shopping.extensions.loadCenterCrop
 
 class ProductListAdapter : RecyclerView.Adapter<ProductListAdapter.ProductItemViewHolder>() {
 
@@ -41,6 +43,7 @@ class ProductListAdapter : RecyclerView.Adapter<ProductListAdapter.ProductItemVi
 
     override fun getItemCount(): Int = productList.size
 
+    //맨 끝에 디폴트값을 넣어준 이유는 어답터가 상품리스트 뿐만아니라 프로필 화면에서도 주문했던 내역을 보기위함.
     fun setProductList(productList: List<ProductEntity>, productItemClickListener: (ProductEntity) -> Unit = { }) {
         this.productList = productList
         this.productItemClickListener = productItemClickListener

@@ -78,7 +78,11 @@ internal class MainActivity : BaseActivity<MainViewModel,ActivityMainBinding>(),
     }
 
 
-    override fun observeData() {
-
+    override fun observeData() = viewModel.mainStateLiveData.observe(this){
+        when(it){
+            is MainState.RefreshOrderList ->{
+               val fragment = supportFragmentManager.findFragmentByTag(ProfileFragment.TAG)
+            }
+        }
     }
 }

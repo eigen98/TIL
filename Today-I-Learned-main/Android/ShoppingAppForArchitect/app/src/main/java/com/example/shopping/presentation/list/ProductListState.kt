@@ -20,4 +20,6 @@ internal sealed class ProductListState {
     //에러
     object Error: ProductListState()
 
+
+
 }

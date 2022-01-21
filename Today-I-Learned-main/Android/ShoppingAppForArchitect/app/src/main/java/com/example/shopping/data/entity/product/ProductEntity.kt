@@ -1,5 +1,7 @@
 package com.example.shopping.data.entity.product
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.*
 
 /**
@@ -15,9 +17,9 @@ import java.util.*
  우리는 다음과 같은 데이터를 받아올 것이다.
  이러한 데이터를 받기 위해 일단은 api를 통해 받아오는 것만 생각.
  */
-
+@Entity
 data class ProductEntity(
-    val id: Long,
+    @PrimaryKey val id: Long,
     val createdAt: Date,
     val productName: String,
     val productPrice: Int,
