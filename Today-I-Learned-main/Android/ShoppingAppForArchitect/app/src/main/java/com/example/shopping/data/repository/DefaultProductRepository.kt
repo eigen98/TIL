@@ -24,37 +24,36 @@ class DefaultProductRepository(
         }
     }
 
-    override suspend fun getLocalProductList(): List<ProductEntity> = withContext(ioDispatcher){
+    override suspend fun getLocalProductList(): List<ProductEntity> = withContext(ioDispatcher) {
+        productDao.getAll()
+    }
+
+    override suspend fun insertProductItem(ProductItem: ProductEntity): Long = withContext(ioDispatcher) {
+        productDao.insert(ProductItem)
+    }
+
+    override suspend fun insertProductList(ProductList: List<ProductEntity>) {
         TODO("Not yet implemented")
     }
 
-    override suspend fun insertProductItem(productItem: ProductEntity): Long = withContext(ioDispatcher){
-        productDao.insert(productItem)
-    }
-
-    override suspend fun insertProductList(ProductList: List<ProductEntity>) = withContext(ioDispatcher){
+    override suspend fun updateProductItem(ProductItem: ProductEntity) {
         TODO("Not yet implemented")
     }
 
-    override suspend fun updateProductItem(ProductItem: ProductEntity) = withContext(ioDispatcher){
-        TODO("Not yet implemented")
-    }
-
-    override suspend fun getProductItem(itemId: Long): ProductEntity? = withContext(ioDispatcher){
+    override suspend fun getProductItem(itemId: Long): ProductEntity? = withContext(ioDispatcher) {
         val response = productApi.getProduct(itemId)
-        return@withContext if(response.isSuccessful){
+        return@withContext if (response.isSuccessful) {
             response.body()?.toEntity()
-        }else {
-
+        } else {
             null
         }
     }
 
-    override suspend fun deleteAll() = withContext(ioDispatcher){
-        TODO("Not yet implemented")
+    override suspend fun deleteAll() = withContext(ioDispatcher) {
+        productDao.deleteAll()
     }
 
-    override suspend fun deleteProductItem(id: Long) = withContext(ioDispatcher){
+    override suspend fun deleteProductItem(id: Long) {
         TODO("Not yet implemented")
     }
 

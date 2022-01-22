@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1082273535965",
+    "project_id": "shoppingformvvm",
+    "storage_bucket": "shoppingformvvm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082273535965:android:1ffbef4e0a319c6eed8834",
+        "android_client_info": {
+          "package_name": "com.example.shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082273535965-q8lcagrud703r5b65ena866911sne2oo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shopping",
+            "certificate_hash": "986288a88abc66920820403c4e2a52b2ec187587"
+          }
+        },
+        {
+          "client_id": "1082273535965-e1qs1c073a3g3r6mda58jhfsh4lprqo7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjWjJSDGfTHfxKD2kDwdhaTMU-lM_15Hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082273535965-e1qs1c073a3g3r6mda58jhfsh4lprqo7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

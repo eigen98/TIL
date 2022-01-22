@@ -82,6 +82,7 @@ internal class MainActivity : BaseActivity<MainViewModel,ActivityMainBinding>(),
         when(it){
             is MainState.RefreshOrderList ->{
                val fragment = supportFragmentManager.findFragmentByTag(ProfileFragment.TAG)
+                //TODO fragment BaseFragment 타입캐스팅 fetchData()
             }
         }
     }

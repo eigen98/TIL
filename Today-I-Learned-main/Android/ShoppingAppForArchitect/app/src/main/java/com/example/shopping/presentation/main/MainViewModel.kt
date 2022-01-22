@@ -8,6 +8,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
 internal class MainViewModel : BaseViewModel() {
+
     override fun fetchData(): Job = viewModelScope.launch {
 
     }

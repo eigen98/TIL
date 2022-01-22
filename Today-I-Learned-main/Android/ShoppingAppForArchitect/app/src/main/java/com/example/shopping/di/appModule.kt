@@ -6,6 +6,7 @@ import com.example.shopping.data.network.buildOkHttpClient
 import com.example.shopping.data.network.provideGsonConverterFactory
 import com.example.shopping.data.network.provideProductApiService
 import com.example.shopping.data.network.provideProductRetrofit
+import com.example.shopping.data.preference.PreferenceManager
 import com.example.shopping.data.repository.DefaultProductRepository
 import com.example.shopping.data.repository.ProductRepository
 import com.example.shopping.domain.GetProductItemUseCase
@@ -18,6 +19,7 @@ import com.example.shopping.presentation.profile.ProfileViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.experimental.dsl.viewModel
 import org.koin.android.ext.koin.androidApplication
+import org.koin.android.ext.koin.androidContext
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -51,6 +53,8 @@ val appModule = module{
     single{ provideProductRetrofit(get(),get())}
     single { provideProductApiService(get()) }
 
+
+    single { PreferenceManager(androidContext()) }
 
     //Database
     single{provideDB(androidApplication())}
