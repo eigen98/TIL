@@ -13,12 +13,15 @@ internal fun provideProductApiService(retrofit: Retrofit): ProductApiService {
     return retrofit.create(ProductApiService::class.java)
 }
 
+//레트로핏2 빌더
+//레트로핏 인스턴스 생성
 internal fun provideProductRetrofit(
     okHttpClient: OkHttpClient,
     gsonConverterFactory: GsonConverterFactory,
 ): Retrofit {
     return Retrofit.Builder()
         .baseUrl(Url.PRODUCT_BASE_URL)
+        //레트로핏은 응답으로 json을 주로 사용. 이러한 응답을 간단하게 변환할 수 있도록 converter제공. 다음과 같이 추가 가능.
         .addConverterFactory(gsonConverterFactory)
         .client(okHttpClient)
         .build()

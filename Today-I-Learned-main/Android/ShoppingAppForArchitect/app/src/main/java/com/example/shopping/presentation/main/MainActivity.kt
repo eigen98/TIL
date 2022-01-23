@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.shopping.R
 import com.example.shopping.databinding.ActivityMainBinding
 import com.example.shopping.presentation.BaseActivity
+import com.example.shopping.presentation.BaseFragment
 import com.example.shopping.presentation.list.ProductListFragment
 import com.example.shopping.presentation.profile.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -79,10 +80,11 @@ internal class MainActivity : BaseActivity<MainViewModel,ActivityMainBinding>(),
 
 
     override fun observeData() = viewModel.mainStateLiveData.observe(this){
-        when(it){
-            is MainState.RefreshOrderList ->{
-               val fragment = supportFragmentManager.findFragmentByTag(ProfileFragment.TAG)
-                //TODO fragment BaseFragment 타입캐스팅 fetchData()
+        when (it) {
+            is MainState.RefreshOrderList -> {
+                binding.bottomNav.selectedItemId = R.id.menu_profile
+                val fragment = supportFragmentManager.findFragmentByTag(ProfileFragment.TAG)
+                (fragment as? BaseFragment<*, *>)?.viewModel?.fetchData()
             }
         }
     }

@@ -2,6 +2,8 @@ package com.example.shopping.data.repository
 
 import com.example.shopping.data.entity.product.ProductEntity
 
+
+//레포지토리 인터페이스만 뷰모델에 접근.
 interface ProductRepository {
 
     suspend fun getProductList(): List<ProductEntity>

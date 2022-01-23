@@ -17,6 +17,9 @@ import java.util.*
  우리는 다음과 같은 데이터를 받아올 것이다.
  이러한 데이터를 받기 위해 일단은 api를 통해 받아오는 것만 생각.
  */
+
+//서버에서 오는 Json객체에 맞추어 Data class작성
+
 @Entity
 data class ProductEntity(
     @PrimaryKey val id: Long,

@@ -30,7 +30,7 @@ internal class ProductDetailActivity : BaseActivity<ProductDetailViewModel,Activ
     //뷰모델 주입
     override val viewModel by inject<ProductDetailViewModel> {
         parametersOf(
-           // intent.getLongExtra()
+            intent.getLongExtra(PRODUCT_ID_KEY, -1)
         )
     }
 

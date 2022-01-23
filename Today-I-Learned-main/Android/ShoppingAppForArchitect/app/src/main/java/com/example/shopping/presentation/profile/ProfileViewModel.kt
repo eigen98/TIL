@@ -1,13 +1,17 @@
 package com.example.shopping.presentation.profile
 
-import android.preference.PreferenceManager
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.shopping.data.preference.PreferenceManager
+import com.example.shopping.domain.DeleteOrderedProductListUseCase
+import com.example.shopping.domain.GetOrderedProductListUseCase
 import com.example.shopping.presentation.BaseViewModel
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+
 
 internal class ProfileViewModel(
     private val preferenceManager: PreferenceManager,
@@ -22,6 +26,7 @@ internal class ProfileViewModel(
         setState(
             ProfileState.Loading
         )
+
         preferenceManager.getIdToken()?.let {
             setState(
                 ProfileState.Login(it)
