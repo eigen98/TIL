@@ -1,7 +1,5 @@
-# aop-part5-chapter06
+# 택배 조회 앱
 
-## ⚠️ 주의사항
-`gradle.properties` 파일에 `스마트 택배 API 키` 를 추가해야합니다.
 
 ## 목차
 0. 인트로, 프로젝트 셋업
@@ -16,8 +14,3 @@
 9. 배송 상세 화면 구현하기
 10. 앱 스타일 다듬기
 11. 배송 출발한 택배 안내 기능 구현하기
-
-## 결과화면
-|추천 영화|영화 목록|영화 리뷰|
-|---|---|---|
-|<img src="https://i.imgur.com/SFaMLpo.png"/>|<img src="https://i.imgur.com/BAYgiTx.png"/>|<img src="https://i.imgur.com/jZ6vbNA.png"/>|
