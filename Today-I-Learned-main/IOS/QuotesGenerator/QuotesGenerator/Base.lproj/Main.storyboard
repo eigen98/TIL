@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QuotesGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="명언 생성기" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGd-oc-imt">
+                                <rect key="frame" x="24" y="68" width="366" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13p-6W-h2H">
+                                <rect key="frame" x="24" y="112.5" width="366" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p52-VD-dD8">
+                                        <rect key="frame" x="20" y="20" width="326" height="119"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtU-AO-hRh">
+                                        <rect key="frame" x="20" y="159" width="326" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="p52-VD-dD8" firstAttribute="leading" secondItem="13p-6W-h2H" secondAttribute="leading" constant="20" id="AvH-Ps-HTm"/>
+                                    <constraint firstItem="p52-VD-dD8" firstAttribute="top" secondItem="13p-6W-h2H" secondAttribute="top" constant="20" id="Lhe-Q9-VFL"/>
+                                    <constraint firstAttribute="trailing" secondItem="RtU-AO-hRh" secondAttribute="trailing" constant="20" id="Rmp-wD-wI9"/>
+                                    <constraint firstAttribute="bottom" secondItem="RtU-AO-hRh" secondAttribute="bottom" constant="20" id="ahP-on-fna"/>
+                                    <constraint firstAttribute="trailing" secondItem="p52-VD-dD8" secondAttribute="trailing" constant="20" id="fM8-aI-dYF"/>
+                                    <constraint firstAttribute="height" constant="200" id="hp7-1v-Q3e"/>
+                                    <constraint firstItem="RtU-AO-hRh" firstAttribute="leading" secondItem="13p-6W-h2H" secondAttribute="leading" constant="20" id="p3P-S1-KE3"/>
+                                    <constraint firstItem="RtU-AO-hRh" firstAttribute="top" secondItem="p52-VD-dD8" secondAttribute="bottom" constant="20" id="si7-CJ-5uC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gC-vq-n8Y">
+                                <rect key="frame" x="169" y="332.5" width="76.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="명언 생성"/>
+                                <connections>
+                                    <action selector="tapQouteGeneratorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgH-Hf-Fef"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zGd-oc-imt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="IxG-xL-RHZ"/>
+                            <constraint firstItem="4gC-vq-n8Y" firstAttribute="top" secondItem="13p-6W-h2H" secondAttribute="bottom" constant="20" id="LST-d1-zzs"/>
+                            <constraint firstItem="13p-6W-h2H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="YnB-Bl-pTo"/>
+                            <constraint firstItem="4gC-vq-n8Y" firstAttribute="centerX" secondItem="13p-6W-h2H" secondAttribute="centerX" id="f7h-q3-1x1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zGd-oc-imt" secondAttribute="trailing" constant="24" id="h3E-Aa-5cD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="13p-6W-h2H" secondAttribute="trailing" constant="24" id="oFi-51-TOy"/>
+                            <constraint firstItem="13p-6W-h2H" firstAttribute="top" secondItem="zGd-oc-imt" secondAttribute="bottom" constant="24" id="rZF-3c-n17"/>
+                            <constraint firstItem="zGd-oc-imt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="sVr-iN-hxO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLebel" destination="RtU-AO-hRh" id="kvV-S7-CZd"/>
+                        <outlet property="qouteLabel" destination="p52-VD-dD8" id="V0e-0P-tIW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="66"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
