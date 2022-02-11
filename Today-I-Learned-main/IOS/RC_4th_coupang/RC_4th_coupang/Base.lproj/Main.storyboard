@@ -222,20 +222,65 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jam_img.png" translatesAutoresizingMaskIntoConstraints="NO" id="5KV-Pk-gKO">
                                         <rect key="frame" x="143.5" y="8" width="127" height="128"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복음자리 블루베리 듬뿍 생생 과일잼, 470G, 1PIECE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxl-4X-33H">
+                                        <rect key="frame" x="8" y="144" width="142" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="7X9-EC-g8A"/>
+                                            <constraint firstAttribute="width" constant="142" id="DSu-ad-SR5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복음자리 딸기 듬뿍 생생 과일잼, 470G, 1PIECE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PS7-sH-mea">
+                                        <rect key="frame" x="143" y="144" width="128" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="128" id="2j0-Zy-65L"/>
+                                            <constraint firstAttribute="height" constant="30" id="360-uq-kuf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="복음자리 딸기 듬뿍 생생 과일잼, 470G, 1PIECE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNK-NC-2DP">
+                                        <rect key="frame" x="278.5" y="144" width="128" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="CRh-eh-VGH"/>
+                                            <constraint firstAttribute="width" constant="128" id="cTm-xA-JkM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="I8H-ha-lay" firstAttribute="leading" secondItem="5KV-Pk-gKO" secondAttribute="trailing" constant="8" id="1ER-9Q-S18"/>
+                                    <constraint firstItem="5KV-Pk-gKO" firstAttribute="centerX" secondItem="PS7-sH-mea" secondAttribute="centerX" id="1y3-nO-QYJ"/>
                                     <constraint firstItem="vzT-t8-ONm" firstAttribute="leading" secondItem="FOw-aL-TZt" secondAttribute="leading" constant="8" id="25S-9L-qSx"/>
                                     <constraint firstAttribute="bottom" secondItem="vzT-t8-ONm" secondAttribute="bottom" constant="58" id="4rU-n1-1Kp"/>
                                     <constraint firstItem="5KV-Pk-gKO" firstAttribute="top" secondItem="vzT-t8-ONm" secondAttribute="top" id="7NN-nc-8EF"/>
                                     <constraint firstItem="I8H-ha-lay" firstAttribute="top" secondItem="vzT-t8-ONm" secondAttribute="top" id="A7S-Kc-Odh"/>
+                                    <constraint firstItem="PS7-sH-mea" firstAttribute="top" secondItem="5KV-Pk-gKO" secondAttribute="bottom" constant="8" id="AuA-is-Ge2"/>
                                     <constraint firstItem="I8H-ha-lay" firstAttribute="height" secondItem="vzT-t8-ONm" secondAttribute="height" id="FSp-0q-nbg"/>
                                     <constraint firstItem="5KV-Pk-gKO" firstAttribute="top" secondItem="FOw-aL-TZt" secondAttribute="top" constant="8" id="JWo-Nj-cqG"/>
                                     <constraint firstAttribute="trailing" secondItem="I8H-ha-lay" secondAttribute="trailing" constant="8" id="PGe-91-53x"/>
                                     <constraint firstItem="5KV-Pk-gKO" firstAttribute="height" secondItem="vzT-t8-ONm" secondAttribute="height" id="ZrU-22-Qke"/>
                                     <constraint firstItem="I8H-ha-lay" firstAttribute="top" secondItem="FOw-aL-TZt" secondAttribute="top" constant="8" id="aQH-i0-f1R"/>
                                     <constraint firstItem="5KV-Pk-gKO" firstAttribute="leading" secondItem="vzT-t8-ONm" secondAttribute="trailing" constant="8" id="dC8-Se-uWi"/>
+                                    <constraint firstItem="I8H-ha-lay" firstAttribute="centerX" secondItem="HNK-NC-2DP" secondAttribute="centerX" id="g1y-z2-uHD"/>
+                                    <constraint firstItem="xxl-4X-33H" firstAttribute="leading" secondItem="FOw-aL-TZt" secondAttribute="leading" constant="8" id="kXS-no-Q6K"/>
+                                    <constraint firstItem="HNK-NC-2DP" firstAttribute="top" secondItem="I8H-ha-lay" secondAttribute="bottom" constant="8" id="mFm-gK-M1y"/>
+                                    <constraint firstItem="xxl-4X-33H" firstAttribute="top" secondItem="vzT-t8-ONm" secondAttribute="bottom" constant="8" id="oTv-hB-NgY"/>
                                     <constraint firstItem="I8H-ha-lay" firstAttribute="width" secondItem="vzT-t8-ONm" secondAttribute="width" id="qLH-If-B5G"/>
                                     <constraint firstItem="5KV-Pk-gKO" firstAttribute="width" secondItem="vzT-t8-ONm" secondAttribute="width" id="t1x-Hi-gdu"/>
                                     <constraint firstItem="vzT-t8-ONm" firstAttribute="top" secondItem="FOw-aL-TZt" secondAttribute="top" constant="8" id="uph-cQ-IW0"/>
@@ -278,6 +323,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="65.625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hpK-Hg-GqL">
+            <objects>
+                <viewController id="Yep-tH-yBW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ee1-Fs-0Vx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qeL-Pe-Gy6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="VIg-ze-tas"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="QJ4-2e-YPR"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="aI0-7q-lth"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vu4-0J-DHH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qeL-Pe-Gy6" firstAttribute="leading" secondItem="Ee1-Fs-0Vx" secondAttribute="leading" id="75Y-SI-lCI"/>
+                            <constraint firstItem="qeL-Pe-Gy6" firstAttribute="top" secondItem="Ee1-Fs-0Vx" secondAttribute="top" constant="8" id="LyO-th-tRU"/>
+                            <constraint firstAttribute="trailing" secondItem="qeL-Pe-Gy6" secondAttribute="trailing" id="bpU-rA-3RR"/>
+                            <constraint firstItem="qeL-Pe-Gy6" firstAttribute="centerX" secondItem="Ee1-Fs-0Vx" secondAttribute="centerX" id="gMb-ws-ZZ8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUP-C5-h11" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924.63768115942037" y="65.625"/>
         </scene>
     </scenes>
     <resources>
