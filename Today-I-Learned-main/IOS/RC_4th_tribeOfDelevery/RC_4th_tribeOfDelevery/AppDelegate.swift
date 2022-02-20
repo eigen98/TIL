@@ -1,13 +1,13 @@
 //
 //  AppDelegate.swift
-//  RC_4th_Pomodoro
+//  RC_4th_tribeOfDelevery
 //
-//  Created by JeongMin Ko on 2022/02/16.
+//  Created by JeongMin Ko on 2022/02/20.
 //
 
 import UIKit
 
- @main
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
@@ -26,7 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        
+        // Called when the user discards a scene session.
+        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
 

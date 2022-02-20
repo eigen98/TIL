@@ -14,10 +14,10 @@ struct RoutineItem {
     let time : String
     static func generateData() -> [RoutineItem]{
         return [
-        RoutineItem(percent: 33, title: "물마시기", time: "오전 10:00 ~ 오전 11:00"),
-        RoutineItem(percent: 15, title: "달리기", time: "오전 11:00 ~ 오후 13:00"),
-        RoutineItem(percent: 60, title: "공부하기", time: "오후 13:00 ~ 오후 15:00"),
-        RoutineItem(percent: 90, title: "알바하기", time: "오후 15:00 ~ 오전 20:00")]
+        RoutineItem(percent: 33, title: "월요일 루틴", time: "오전 10:00 ~ 오전 11:00"),
+        RoutineItem(percent: 15, title: "화요일 루틴", time: "오전 11:00 ~ 오후 13:00"),
+        RoutineItem(percent: 60, title: "수요일 루틴", time: "오후 13:00 ~ 오후 15:00"),
+        RoutineItem(percent: 90, title: "목요일 루틴", time: "오후 15:00 ~ 오전 20:00")]
     }
 }
 
@@ -62,9 +62,9 @@ extension RoutineViewController : UITableViewDelegate{
     
         var routine = self.routines[indexPath.row] //배열 요소에 접근
         
-        guard let detailRoutineVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailRoutineVC") else { return }
+        guard let detailRoutineVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailRoutineVC") as? DetailRoutineViewController else { return }
         
-        
+        detailRoutineVC.routine = routine
         
         self.navigationController?.pushViewController(detailRoutineVC, animated: true)
     }

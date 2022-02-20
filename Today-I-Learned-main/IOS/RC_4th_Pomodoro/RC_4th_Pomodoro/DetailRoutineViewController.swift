@@ -23,10 +23,16 @@ struct DetailItem {
 }
 
 class DetailRoutineViewController: UIViewController {
+    
+    var routine : RoutineItem?
 
     var details = DetailItem.generateData()
     
     @IBOutlet weak var detailTableView: UITableView!
+    
+    @IBOutlet weak var routineName: UILabel!
+    
+    @IBOutlet weak var routineTime: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,12 +61,20 @@ class DetailRoutineViewController: UIViewController {
         floatingButton.addTarget(self, action:  #selector(onTapButton), for: .touchUpInside)
         
         
+        //전달 받을 데이터 적용
+        self.routineName.text = routine?.title
+        self.routineTime.text = routine?.time
+        
+        
     }
+    
+    
     @objc
     func onTapButton(){
-        guard let timeVC = self.storyboard?.instantiateViewController(withIdentifier: "timerVC") else { return }
+        guard let timeVC = (self.storyboard?.instantiateViewController(withIdentifier: "timerVC") as? TimerViewController) else { return }
         
-        //mainVC.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        timeVC.routine = self.routine
+        
         
         self.present(timeVC, animated: true)
         

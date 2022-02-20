@@ -425,7 +425,7 @@ Cg
         <!--Progress View Controller-->
         <scene sceneID="NJm-YP-xCQ">
             <objects>
-                <viewController storyboardIdentifier="IntroVC" id="F2m-gz-UWY" customClass="ProgressViewController" customModule="RC_4th_Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IntroVC" modalPresentationStyle="fullScreen" id="F2m-gz-UWY" customClass="ProgressViewController" customModule="RC_4th_Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gne-Tv-cbG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -479,7 +479,7 @@ Cg
         <!--Tab Bar Controller-->
         <scene sceneID="4Yn-0X-yY8">
             <objects>
-                <tabBarController storyboardIdentifier="MainVC" automaticallyAdjustsScrollViewInsets="NO" id="1a1-sX-lxI" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="1a1-sX-lxI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FwT-l5-4uE">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -499,7 +499,7 @@ Cg
         <!--Navigation Controller-->
         <scene sceneID="H9h-St-SAt">
             <objects>
-                <navigationController id="p5y-Gl-brv" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="p5y-Gl-brv" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="clock" catalog="system" selectedImage="clock.fill" id="vQz-C1-oGu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9WX-iq-qHa">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -516,7 +516,7 @@ Cg
         <!--Navigation Controller-->
         <scene sceneID="lHa-lw-OLQ">
             <objects>
-                <navigationController id="syt-Xq-39u" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="syt-Xq-39u" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="chart.bar" catalog="system" selectedImage="chart.bar.fill" id="3fN-xi-QuP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ele-f9-PcT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -533,7 +533,7 @@ Cg
         <!--Navigation Controller-->
         <scene sceneID="38l-TK-mwL">
             <objects>
-                <navigationController id="PDu-dQ-AXk" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="PDu-dQ-AXk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" selectedImage="person.fill" id="4FV-Wc-nlS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JHG-lS-PB9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -550,7 +550,7 @@ Cg
         <!--Routine View Controller-->
         <scene sceneID="Zz3-l9-NwJ">
             <objects>
-                <viewController id="gQO-sy-xk2" customClass="RoutineViewController" customModule="RC_4th_Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gQO-sy-xk2" customClass="RoutineViewController" customModule="RC_4th_Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nzd-Bu-iwL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -867,6 +867,8 @@ Cg
                     </view>
                     <connections>
                         <outlet property="detailTableView" destination="lEh-xt-m4D" id="hQC-ba-IMu"/>
+                        <outlet property="routineName" destination="XtN-rX-gkc" id="3Kx-45-z2t"/>
+                        <outlet property="routineTime" destination="Fp3-wf-4qn" id="BGU-4E-6XN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Its-Zo-5sP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -876,7 +878,7 @@ Cg
         <!--Timer View Controller-->
         <scene sceneID="6hz-sg-gVb">
             <objects>
-                <viewController storyboardIdentifier="timerVC" id="anL-E0-LxS" customClass="TimerViewController" customModule="RC_4th_Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="timerVC" modalPresentationStyle="fullScreen" id="anL-E0-LxS" customClass="TimerViewController" customModule="RC_4th_Pomodoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2O6-VY-PvF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1031,6 +1033,7 @@ Cg
                         <outlet property="cancelButton" destination="f00-jq-qYR" id="Mbu-8Z-8PV"/>
                         <outlet property="countDown" destination="NN8-rh-P25" id="T8k-rQ-cDU"/>
                         <outlet property="playButton" destination="TXw-oS-WBr" id="mvY-fv-PCe"/>
+                        <outlet property="routinePartName" destination="Q2e-UO-FbA" id="O9o-9M-sWs"/>
                         <outlet property="routineTitle" destination="t9M-R6-AuP" id="1gR-g9-ypi"/>
                         <outlet property="startView" destination="3gf-Mi-2L2" id="vi2-MD-TAc"/>
                         <outlet property="startedTimer" destination="3gf-Mi-2L2" id="Xxn-OP-LPr"/>

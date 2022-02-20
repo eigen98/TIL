@@ -16,6 +16,7 @@ enum TimerStatus {
 
 class TimerViewController: UIViewController {
 
+    @IBOutlet weak var routinePartName: UILabel!
     @IBOutlet weak var startView: UIView!
     
     @IBOutlet weak var routineTitle: UILabel!
@@ -36,13 +37,25 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var countDown: UILabel!
     var timer: DispatchSourceTimer? // 타이머
     
+    var routine : RoutineItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.startView.isHidden = false
-        
+        routineTitle.text = routine?.title
+        totalTime.text = routine?.time
+        routinePartName.text = "이불 정리"
         
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        stopTimer()
+        self.duration = 59
+    }
+    
+    
+    
+    
     
     private func startTimer() {
             if self.timer == nil { // 타이머가 메모리에 부재 시 타이머 소스를 생성하고 스케줄을 등록한다.
