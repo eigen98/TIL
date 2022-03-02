@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E512A94A5E5D1F7B20456A6 /* Pods_RC_4th_tribeOfDelevery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62CB5F59AABAE05CA3E83F7 /* Pods_RC_4th_tribeOfDelevery.framework */; };
+		EE6778F927C45BAE0042D30E /* CategoryTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6778F827C45BAE0042D30E /* CategoryTabBarViewController.swift */; };
+		EE6778FB27C45BEC0042D30E /* ChickenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6778FA27C45BEC0042D30E /* ChickenViewController.swift */; };
+		EE6778FD27C469AC0042D30E /* CategorySegmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6778FC27C469AC0042D30E /* CategorySegmentController.swift */; };
+		EE9F761C27C9866B00687510 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDF4E327C1F34400C4E726 /* ViewController.swift */; };
+		EEB29F1F27C9B6CD003B29D3 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB29F1E27C9B6CD003B29D3 /* RestaurantTableViewCell.swift */; };
 		EEEDF4E027C1F34400C4E726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDF4DF27C1F34400C4E726 /* AppDelegate.swift */; };
 		EEEDF4E227C1F34400C4E726 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDF4E127C1F34400C4E726 /* SceneDelegate.swift */; };
-		EEEDF4E427C1F34400C4E726 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDF4E327C1F34400C4E726 /* ViewController.swift */; };
 		EEEDF4E727C1F34400C4E726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEDF4E527C1F34400C4E726 /* Main.storyboard */; };
 		EEEDF4E927C1F34600C4E726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEEDF4E827C1F34600C4E726 /* Assets.xcassets */; };
 		EEEDF4EC27C1F34600C4E726 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEDF4EA27C1F34600C4E726 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10C6F2386B0B4CE310D61B38 /* Pods-RC_4th_tribeOfDelevery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RC_4th_tribeOfDelevery.debug.xcconfig"; path = "Target Support Files/Pods-RC_4th_tribeOfDelevery/Pods-RC_4th_tribeOfDelevery.debug.xcconfig"; sourceTree = "<group>"; };
+		E59D12B43DCC8BDD494BC041 /* Pods-RC_4th_tribeOfDelevery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RC_4th_tribeOfDelevery.release.xcconfig"; path = "Target Support Files/Pods-RC_4th_tribeOfDelevery/Pods-RC_4th_tribeOfDelevery.release.xcconfig"; sourceTree = "<group>"; };
+		E62CB5F59AABAE05CA3E83F7 /* Pods_RC_4th_tribeOfDelevery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RC_4th_tribeOfDelevery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6778F827C45BAE0042D30E /* CategoryTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTabBarViewController.swift; sourceTree = "<group>"; };
+		EE6778FA27C45BEC0042D30E /* ChickenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenViewController.swift; sourceTree = "<group>"; };
+		EE6778FC27C469AC0042D30E /* CategorySegmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySegmentController.swift; sourceTree = "<group>"; };
+		EEB29F1E27C9B6CD003B29D3 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantTableViewCell.swift; path = ../../../../../RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		EEEDF4DC27C1F34400C4E726 /* RC_4th_tribeOfDelevery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RC_4th_tribeOfDelevery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEDF4DF27C1F34400C4E726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEEDF4E127C1F34400C4E726 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E512A94A5E5D1F7B20456A6 /* Pods_RC_4th_tribeOfDelevery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		029E5CD2A0C95EFA4B15067D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E62CB5F59AABAE05CA3E83F7 /* Pods_RC_4th_tribeOfDelevery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE6778F727C45B200042D30E /* ListOfRestaurant */ = {
+			isa = PBXGroup;
+			children = (
+				EE6778F827C45BAE0042D30E /* CategoryTabBarViewController.swift */,
+				EE6778FA27C45BEC0042D30E /* ChickenViewController.swift */,
+				EE6778FC27C469AC0042D30E /* CategorySegmentController.swift */,
+			);
+			path = ListOfRestaurant;
+			sourceTree = "<group>";
+		};
 		EEEDF4D327C1F34400C4E726 = {
 			isa = PBXGroup;
 			children = (
 				EEEDF4DE27C1F34400C4E726 /* RC_4th_tribeOfDelevery */,
 				EEEDF4DD27C1F34400C4E726 /* Products */,
+				F0AEFB42640AB099CDDD2C3A /* Pods */,
+				029E5CD2A0C95EFA4B15067D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +89,26 @@
 		EEEDF4DE27C1F34400C4E726 /* RC_4th_tribeOfDelevery */ = {
 			isa = PBXGroup;
 			children = (
+				EE6778F727C45B200042D30E /* ListOfRestaurant */,
 				EEEDF4DF27C1F34400C4E726 /* AppDelegate.swift */,
-				EEEDF4E127C1F34400C4E726 /* SceneDelegate.swift */,
 				EEEDF4E327C1F34400C4E726 /* ViewController.swift */,
+				EEEDF4E127C1F34400C4E726 /* SceneDelegate.swift */,
+				EEB29F1E27C9B6CD003B29D3 /* RestaurantTableViewCell.swift */,
 				EEEDF4E527C1F34400C4E726 /* Main.storyboard */,
 				EEEDF4E827C1F34600C4E726 /* Assets.xcassets */,
 				EEEDF4EA27C1F34600C4E726 /* LaunchScreen.storyboard */,
 				EEEDF4ED27C1F34600C4E726 /* Info.plist */,
 			);
 			path = RC_4th_tribeOfDelevery;
+			sourceTree = "<group>";
+		};
+		F0AEFB42640AB099CDDD2C3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10C6F2386B0B4CE310D61B38 /* Pods-RC_4th_tribeOfDelevery.debug.xcconfig */,
+				E59D12B43DCC8BDD494BC041 /* Pods-RC_4th_tribeOfDelevery.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEEDF4F027C1F34600C4E726 /* Build configuration list for PBXNativeTarget "RC_4th_tribeOfDelevery" */;
 			buildPhases = (
+				B22C56E2D4701086A870FE93 /* [CP] Check Pods Manifest.lock */,
 				EEEDF4D827C1F34400C4E726 /* Sources */,
 				EEEDF4D927C1F34400C4E726 /* Frameworks */,
 				EEEDF4DA27C1F34400C4E726 /* Resources */,
+				2016563B96ACB8646FA847D0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +179,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2016563B96ACB8646FA847D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RC_4th_tribeOfDelevery/Pods-RC_4th_tribeOfDelevery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RC_4th_tribeOfDelevery/Pods-RC_4th_tribeOfDelevery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RC_4th_tribeOfDelevery/Pods-RC_4th_tribeOfDelevery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B22C56E2D4701086A870FE93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RC_4th_tribeOfDelevery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EEEDF4D827C1F34400C4E726 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEEDF4E427C1F34400C4E726 /* ViewController.swift in Sources */,
 				EEEDF4E027C1F34400C4E726 /* AppDelegate.swift in Sources */,
+				EE6778F927C45BAE0042D30E /* CategoryTabBarViewController.swift in Sources */,
+				EE6778FB27C45BEC0042D30E /* ChickenViewController.swift in Sources */,
 				EEEDF4E227C1F34400C4E726 /* SceneDelegate.swift in Sources */,
+				EE9F761C27C9866B00687510 /* ViewController.swift in Sources */,
+				EEB29F1F27C9B6CD003B29D3 /* RestaurantTableViewCell.swift in Sources */,
+				EE6778FD27C469AC0042D30E /* CategorySegmentController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +376,7 @@
 		};
 		EEEDF4F127C1F34600C4E726 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10C6F2386B0B4CE310D61B38 /* Pods-RC_4th_tribeOfDelevery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +405,7 @@
 		};
 		EEEDF4F227C1F34600C4E726 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E59D12B43DCC8BDD494BC041 /* Pods-RC_4th_tribeOfDelevery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
