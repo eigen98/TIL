@@ -88,6 +88,11 @@ class ViewController: UIViewController {
     @IBAction func tapToggleButton(_ sender: UIButton) {
         self.duration = Int(self.datePicker.countDownDuration)
         
+//        enum TimerStatus {
+//            case start
+//            case pause
+//            case end
+//        }
         switch self.timerStatus {
         case .end:
             self.currentSecond = self.duration

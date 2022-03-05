@@ -15,6 +15,8 @@
 		EE0A664027CD4E57008DF673 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0A663E27CD4E57008DF673 /* LaunchScreen.storyboard */; };
 		EE214FD127CED29600503AC2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE214FD027CED29600503AC2 /* Player.swift */; };
 		EE214FD327CED52000503AC2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE214FD227CED52000503AC2 /* Card.swift */; };
+		EEAE1EC327D0DFC4007E44F5 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE1EC227D0DFC4007E44F5 /* State.swift */; };
+		EEAE1EC727D15C8A007E44F5 /* CustomPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE1EC627D15C8A007E44F5 /* CustomPopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		EE0A664127CD4E57008DF673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE214FD027CED29600503AC2 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		EE214FD227CED52000503AC2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		EEAE1EC227D0DFC4007E44F5 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		EEAE1EC627D15C8A007E44F5 /* CustomPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				EE0A663E27CD4E57008DF673 /* LaunchScreen.storyboard */,
 				EE0A664127CD4E57008DF673 /* Info.plist */,
 				EE214FD027CED29600503AC2 /* Player.swift */,
+				EEAE1EC227D0DFC4007E44F5 /* State.swift */,
+				EEAE1EC627D15C8A007E44F5 /* CustomPopUpViewController.swift */,
 			);
 			path = RC_4th_CardGame;
 			sourceTree = "<group>";
@@ -149,6 +155,8 @@
 				EE214FD327CED52000503AC2 /* Card.swift in Sources */,
 				EE0A663427CD4E56008DF673 /* AppDelegate.swift in Sources */,
 				EE0A663627CD4E56008DF673 /* SceneDelegate.swift in Sources */,
+				EEAE1EC327D0DFC4007E44F5 /* State.swift in Sources */,
+				EEAE1EC727D15C8A007E44F5 /* CustomPopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
