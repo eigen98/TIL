@@ -15,6 +15,7 @@
 		EE78A0E727CB64BD00414EFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE78A0E527CB64BD00414EFF /* Main.storyboard */; };
 		EE78A0E927CB64BE00414EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE78A0E827CB64BE00414EFF /* Assets.xcassets */; };
 		EE78A0EC27CB64BE00414EFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE78A0EA27CB64BE00414EFF /* LaunchScreen.storyboard */; };
+		EE94F24627D36B5600E024C8 /* CityCovidOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94F24527D36B5600E024C8 /* CityCovidOverview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EE78A0E827CB64BE00414EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE78A0EB27CB64BE00414EFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE78A0ED27CB64BE00414EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE94F24527D36B5600E024C8 /* CityCovidOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCovidOverview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				EE78A0EA27CB64BE00414EFF /* LaunchScreen.storyboard */,
 				EE78A0ED27CB64BE00414EFF /* Info.plist */,
 				EE50B2EF27CD2441006B2BFD /* COVIDDetailViewController.swift */,
+				EE94F24527D36B5600E024C8 /* CityCovidOverview.swift */,
 			);
 			path = COVID19;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				EE78A0E427CB64BD00414EFF /* ViewController.swift in Sources */,
 				EE50B2F027CD2441006B2BFD /* COVIDDetailViewController.swift in Sources */,
 				EE78A0E027CB64BD00414EFF /* AppDelegate.swift in Sources */,
+				EE94F24627D36B5600E024C8 /* CityCovidOverview.swift in Sources */,
 				EE78A0E227CB64BD00414EFF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +296,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -347,6 +352,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
