@@ -46,7 +46,7 @@
 
 ## 💾 개념 정리 
 ### [AppDelegate와 Scene Delegate란?](https://eigen.tistory.com/3)
-
+### [코드를 이용한 뷰 배경색 설정 (Custom Color)](https://eigen.tistory.com/5)
 
 
 # 📒 회고
