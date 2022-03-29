@@ -29,11 +29,12 @@
 #### [레이아웃 클론 + 생명주기 프로그래밍과제](https://github.com/eigen98/TIL/tree/master/Today-I-Learned-main/IOS/RC_4th_Pomodoro)
 
 ### 3주차
+
 #### TableView의 필요성
 
 ### 4주차(Thread란? 싱글스레드와 멀티쓰레드의 차이점은? 동기/비동기, 직렬/동시가 무엇인가?)  
-- 애니메이션과 쓰레드를 이용한 게임프로그래밍 과제  
-[(추억의 원카드 클론앱)](https://github.com/eigen98/TIL/tree/master/Today-I-Learned-main/IOS/RC_4th_CardGame)
+#### 애니메이션과 쓰레드를 이용한 게임프로그래밍 과제  
+#### 🃏 [(추억의 원카드 클론앱)](https://github.com/eigen98/TIL/tree/master/Today-I-Learned-main/IOS/RC_4th_CardGame)
 
 ### 5주차
 #### TableView의 필요성
@@ -42,4 +43,13 @@
 #### HTTP Method의 종류, HTTP통신의 과정과 IOS의 구현순서
 #### [OPEN API를 활용한 클론코딩 프로그래밍 과제](https://github.com/eigen98/TIL/tree/master/Today-I-Learned-main/IOS/RC_4th_MangoPlate)
 
+
+## 💾 개념 정리 
+### [AppDelegate와 Scene Delegate란?](https://eigen.tistory.com/3)
+
+
+
+# 📒 회고
+
+## [DND 6기를 마친 후기](https://eigen.tistory.com/2)
 
