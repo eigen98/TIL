@@ -23,6 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let HomeViewController = HomeViewController(collectionViewLayout: layout)
         let rootNavigationController = UINavigationController(rootViewController:  HomeViewController)
         
+        
         //설정한 rootViewController를 window에 할당
         self.window?.rootViewController = rootNavigationController
         self.window?.makeKeyAndVisible() // 설정한 값들이 보여지게됨

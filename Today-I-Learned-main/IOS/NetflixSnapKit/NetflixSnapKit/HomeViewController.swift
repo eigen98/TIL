@@ -6,9 +6,13 @@ import SwiftUI
 class HomeViewController : UICollectionViewController{
     //준비한 컨텐츠를 담을 배열
     var contents : [Content] = []
+    //랜덤으로 하나만 보여줄 아이템 변수
+    var mainItem : Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         //네비게이션 설정
         navigationController?.navigationBar.backgroundColor = .clear
@@ -23,12 +27,17 @@ class HomeViewController : UICollectionViewController{
         
         //Data 설정, 가져오기
         contents = getContents()
+        //가져온 컨텐츠를 랜덤으로 뽑아서 할당
+        mainItem = contents.first?.contentItem.randomElement()
+        
+        collectionView.backgroundColor = .black
         
         //컬렉션 뷰 아이템 셀 설정
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "ContentCollectionViewCell")
         collectionView.register(ContentCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ContentCollectionViewHeader")
         
         collectionView.register(ContentCollectionViewRankCell.self, forCellWithReuseIdentifier: "ContentCollectionViewRankCell")
+        collectionView.register(ContentCollectionMainCell.self, forCellWithReuseIdentifier: "ContentCollectionMainCell")
         collectionView.collectionViewLayout = layout()
         
     }
@@ -59,6 +68,9 @@ class HomeViewController : UICollectionViewController{
                 return self.createLargeTypeSection()
             case .rank :
                 return self.createRankTypeSection()
+            
+            case .main :
+                return self.createMainTypeSection()
             
             default :
                 return nil
@@ -107,6 +119,23 @@ class HomeViewController : UICollectionViewController{
         
     }
     
+    //Main Secgtion Layout설정
+    private func createMainTypeSection() -> NSCollectionLayoutSection{
+        //item
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        //group
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(450))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        
+        //section
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = .init(top: 0, leading: 0, bottom: 20, trailing: 0)
+        return section
+        
+    }
+    
     //섹션 헤더 레이아웃 설정
     private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem{
         //섹션 헤더 사이즈
@@ -143,10 +172,7 @@ class HomeViewController : UICollectionViewController{
 extension HomeViewController {
     //섹션당 보여질 셀의 개수
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if contents[section].sectionType == .basic
-            || contents[section].sectionType == .large
-            || contents[section].sectionType == .rank
-        {
+       
             
         
         switch section {
@@ -155,7 +181,7 @@ extension HomeViewController {
         default :
             return contents[section].contentItem.count
         }
-        }
+        
         return 0
     }
     //셀 설정
@@ -171,6 +197,12 @@ extension HomeViewController {
             
             cell.imageView.image = contents[indexPath.section].contentItem[indexPath.row].image
             cell.rankLabel.text = String(describing: indexPath.row + 1)
+            return cell
+        case .main :
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContentCollectionMainCell", for: indexPath) as? ContentCollectionMainCell else { return  UICollectionViewCell() }
+            
+            cell.imageView.image = mainItem?.image
+            cell.descriptionLabel.text = mainItem?.description
             return cell
             
         default :
@@ -206,7 +238,11 @@ extension HomeViewController {
 //SwiftUI를 활용한 미리보기
 struct HomeViewController_Previews : PreviewProvider {
     static var previews: some View{
-        Container().edgesIgnoringSafeArea(.all)
+        Group {
+            Container().edgesIgnoringSafeArea(.all)
+            Container().edgesIgnoringSafeArea(.all)
+            Container().edgesIgnoringSafeArea(.all)
+        }
     }
     struct Container : UIViewControllerRepresentable{
         

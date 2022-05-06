@@ -19,6 +19,7 @@
 		EE5B891D28238CE800F74B25 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5B891C28238CE800F74B25 /* ContentCollectionViewCell.swift */; };
 		EE5B891F2823903500F74B25 /* ContentCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5B891E2823903500F74B25 /* ContentCollectionViewHeader.swift */; };
 		EE9266262824178600700EFC /* ContentCollectionViewMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9266252824178600700EFC /* ContentCollectionViewMainCell.swift */; };
+		EEBEA5582824C97200A94CF8 /* UIBUtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEA5572824C97200A94CF8 /* UIBUtton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		EE5B891C28238CE800F74B25 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE5B891E2823903500F74B25 /* ContentCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewHeader.swift; sourceTree = "<group>"; };
 		EE9266252824178600700EFC /* ContentCollectionViewMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewMainCell.swift; sourceTree = "<group>"; };
+		EEBEA5572824C97200A94CF8 /* UIBUtton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBUtton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				EE5B891E2823903500F74B25 /* ContentCollectionViewHeader.swift */,
 				EE48D8632823F23D00F82338 /* ContentCollectionViewRankCell.swift */,
 				EE9266252824178600700EFC /* ContentCollectionViewMainCell.swift */,
+				EEBEA5572824C97200A94CF8 /* UIBUtton.swift */,
 			);
 			path = NetflixSnapKit;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE24F4A9280EA6730072C218 /* AppDelegate.swift in Sources */,
+				EEBEA5582824C97200A94CF8 /* UIBUtton.swift in Sources */,
 				EE5B891F2823903500F74B25 /* ContentCollectionViewHeader.swift in Sources */,
 				EE24F4AB280EA6730072C218 /* SceneDelegate.swift in Sources */,
 				EE48D8642823F23D00F82338 /* ContentCollectionViewRankCell.swift in Sources */,
@@ -325,7 +329,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -352,7 +356,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
