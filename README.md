@@ -48,7 +48,7 @@
 ### [AppDelegate와 Scene Delegate란?](https://eigen.tistory.com/3)
 ### [코드를 이용한 뷰 배경색 설정 (Custom Color)](https://eigen.tistory.com/5)
 ### [SnapKit사용해보기](https://eigen.tistory.com/6)
-
+### [URLSession 사용해보기 전 네트워크 구조 정리](https://eigen.tistory.com/7)
 
 # 📒 회고
 
