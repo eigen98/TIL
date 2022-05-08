@@ -51,7 +51,8 @@
 ### [URLSession 사용해보기 전 네트워크 구조 정리](https://eigen.tistory.com/7)
 ### [URLSession 정리](https://eigen.tistory.com/8)
 #### [URLSession 예제](https://github.com/eigen98/TIL/tree/master/Today-I-Learned-main/IOS/Brewery)
-
+### [스토리보드 없이 레이아웃 작성 연습](https://eigen.tistory.com/10)
+### [ShareSheet 사용해보기](https://eigen.tistory.com/11)
 
 # 📒 회고
 
