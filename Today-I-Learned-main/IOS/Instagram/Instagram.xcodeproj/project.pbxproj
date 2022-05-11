@@ -18,6 +18,7 @@
 		EE08FD8A282A3AB50063280C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE08FD89282A3AB50063280C /* ProfileViewController.swift */; };
 		EE08FD8D282A48550063280C /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE08FD8C282A48550063280C /* ProfileDataView.swift */; };
 		EEA18408282A5FFA005F1DF3 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA18407282A5FFA005F1DF3 /* ProfileCollectionViewCell.swift */; };
+		EEA5E11A282AB5CD00E84D24 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA5E119282AB5CD00E84D24 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		EE08FD89282A3AB50063280C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EE08FD8C282A48550063280C /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
 		EEA18407282A5FFA005F1DF3 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		EEA5E119282AB5CD00E84D24 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				EE08FD70282A003D0063280C /* FeedViewController.swift */,
 				EE08FD86282A0B6A0063280C /* FeedTableViewCell.swift */,
+				EEA5E119282AB5CD00E84D24 /* UploadViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				EE08FD71282A003D0063280C /* FeedViewController.swift in Sources */,
 				EEA18408282A5FFA005F1DF3 /* ProfileCollectionViewCell.swift in Sources */,
 				EE08FD8D282A48550063280C /* ProfileDataView.swift in Sources */,
+				EEA5E11A282AB5CD00E84D24 /* UploadViewController.swift in Sources */,
 				EE08FD84282A02820063280C /* TabBarController.swift in Sources */,
 				EE08FD6D282A003D0063280C /* AppDelegate.swift in Sources */,
 				EE08FD6F282A003D0063280C /* SceneDelegate.swift in Sources */,
