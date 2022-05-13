@@ -20,6 +20,10 @@
 		5BE758E1B6F994B14439CD81 /* Pods_RXswiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RXswiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		942C5B6C424FCDC24EC88726 /* Pods-RXswiftPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXswiftPractice.debug.xcconfig"; path = "Target Support Files/Pods-RXswiftPractice/Pods-RXswiftPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		A2590F04DA1219F77D972016 /* Pods-RXswiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXswiftPractice.release.xcconfig"; path = "Target Support Files/Pods-RXswiftPractice/Pods-RXswiftPractice.release.xcconfig"; sourceTree = "<group>"; };
+		EE848ED4282DEABF00C8DF63 /* Traits.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Traits.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EE88F61C282E1E3300F24096 /* Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EE88F61D282E2B9400F24096 /* FilteringOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FilteringOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EE88F61E282E383700F24096 /* TransformingOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformingOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EE940FFE282C937F00C5F70B /* RXswiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXswiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE941001282C937F00C5F70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE941003282C937F00C5F70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,10 @@
 				EE94100C282C938000C5F70B /* LaunchScreen.storyboard */,
 				EE94100F282C938000C5F70B /* Info.plist */,
 				EE941015282C9B0800C5F70B /* Observerble.playground */,
+				EE848ED4282DEABF00C8DF63 /* Traits.playground */,
+				EE88F61C282E1E3300F24096 /* Subject.playground */,
+				EE88F61D282E2B9400F24096 /* FilteringOperator.playground */,
+				EE88F61E282E383700F24096 /* TransformingOperator.playground */,
 			);
 			path = RXswiftPractice;
 			sourceTree = "<group>";
