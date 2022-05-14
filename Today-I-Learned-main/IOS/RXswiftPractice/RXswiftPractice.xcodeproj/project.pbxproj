@@ -24,6 +24,7 @@
 		EE88F61C282E1E3300F24096 /* Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EE88F61D282E2B9400F24096 /* FilteringOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FilteringOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EE88F61E282E383700F24096 /* TransformingOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformingOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EE93BD68282E91CE0055A3F8 /* CombiningOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EE940FFE282C937F00C5F70B /* RXswiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXswiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE941001282C937F00C5F70B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE941003282C937F00C5F70B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +34,7 @@
 		EE94100D282C938000C5F70B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE94100F282C938000C5F70B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE941015282C9B0800C5F70B /* Observerble.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observerble.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EE9DCDD6282F37D20067EDC2 /* TimeBasedOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TimeBasedOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,8 @@
 				EE88F61C282E1E3300F24096 /* Subject.playground */,
 				EE88F61D282E2B9400F24096 /* FilteringOperator.playground */,
 				EE88F61E282E383700F24096 /* TransformingOperator.playground */,
+				EE93BD68282E91CE0055A3F8 /* CombiningOperator.playground */,
+				EE9DCDD6282F37D20067EDC2 /* TimeBasedOperator.playground */,
 			);
 			path = RXswiftPractice;
 			sourceTree = "<group>";
