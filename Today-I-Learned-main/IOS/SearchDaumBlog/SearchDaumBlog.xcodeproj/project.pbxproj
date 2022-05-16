@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE098BC62830CD340058CA93 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE098BC52830CD340058CA93 /* FilterView.swift */; };
+		EE098BC82830CEDE0058CA93 /* BlogList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE098BC72830CEDE0058CA93 /* BlogList.swift */; };
+		EE098BCA2830CEEB0058CA93 /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE098BC92830CEEB0058CA93 /* BlogListCell.swift */; };
+		EE098BCC2830CF100058CA93 /* BlogListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE098BCB2830CF100058CA93 /* BlogListCellData.swift */; };
 		EEDD0919282FCE5700C38D57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD0918282FCE5700C38D57 /* AppDelegate.swift */; };
 		EEDD091B282FCE5700C38D57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD091A282FCE5700C38D57 /* SceneDelegate.swift */; };
 		EEDD0922282FCE5800C38D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEDD0921282FCE5800C38D57 /* Assets.xcassets */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE098BC52830CD340058CA93 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		EE098BC72830CEDE0058CA93 /* BlogList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogList.swift; sourceTree = "<group>"; };
+		EE098BC92830CEEB0058CA93 /* BlogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
+		EE098BCB2830CF100058CA93 /* BlogListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCellData.swift; sourceTree = "<group>"; };
 		EEDD0915282FCE5700C38D57 /* SearchDaumBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchDaumBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEDD0918282FCE5700C38D57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEDD091A282FCE5700C38D57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +55,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE098BCD2830CF1E0058CA93 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EEDD0939282FCF9E00C38D57 /* MainViewController.swift */,
+				EEDD093B282FD3B100C38D57 /* SearchBar.swift */,
+				EE098BC52830CD340058CA93 /* FilterView.swift */,
+				EE098BC72830CEDE0058CA93 /* BlogList.swift */,
+				EE098BC92830CEEB0058CA93 /* BlogListCell.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EE098BCE2830CF3B0058CA93 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EE098BCB2830CF100058CA93 /* BlogListCellData.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		EEDD090C282FCE5700C38D57 = {
 			isa = PBXGroup;
 			children = (
@@ -66,13 +94,13 @@
 		EEDD0917282FCE5700C38D57 /* SearchDaumBlog */ = {
 			isa = PBXGroup;
 			children = (
+				EE098BCE2830CF3B0058CA93 /* Entities */,
+				EE098BCD2830CF1E0058CA93 /* Presentation */,
 				EEDD0918282FCE5700C38D57 /* AppDelegate.swift */,
 				EEDD091A282FCE5700C38D57 /* SceneDelegate.swift */,
 				EEDD0921282FCE5800C38D57 /* Assets.xcassets */,
 				EEDD0923282FCE5800C38D57 /* LaunchScreen.storyboard */,
 				EEDD0926282FCE5800C38D57 /* Info.plist */,
-				EEDD0939282FCF9E00C38D57 /* MainViewController.swift */,
-				EEDD093B282FD3B100C38D57 /* SearchBar.swift */,
 			);
 			path = SearchDaumBlog;
 			sourceTree = "<group>";
@@ -160,8 +188,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEDD093A282FCF9E00C38D57 /* MainViewController.swift in Sources */,
+				EE098BCA2830CEEB0058CA93 /* BlogListCell.swift in Sources */,
+				EE098BC82830CEDE0058CA93 /* BlogList.swift in Sources */,
+				EE098BCC2830CF100058CA93 /* BlogListCellData.swift in Sources */,
 				EEDD093C282FD3B100C38D57 /* SearchBar.swift in Sources */,
 				EEDD0919282FCE5700C38D57 /* AppDelegate.swift in Sources */,
+				EE098BC62830CD340058CA93 /* FilterView.swift in Sources */,
 				EEDD091B282FCE5700C38D57 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
