@@ -54,6 +54,7 @@
 ### [스토리보드 없이 레이아웃 작성 연습](https://eigen.tistory.com/10)
 ### [ShareSheet 사용해보기](https://eigen.tistory.com/11)
 ### [RXSwift란?](https://eigen.tistory.com/16)
+### [Graphql이란?](https://eigen.tistory.com/25)
 
 
 # 📒 회고
