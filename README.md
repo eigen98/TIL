@@ -86,6 +86,7 @@
 ### [6월8일 알고리즘 연습](https://eigen.tistory.com/39)
 ### [6월9일 알고리즘 연습](https://eigen.tistory.com/40)
 ### [6월11일 알고리즘 연습](https://eigen.tistory.com/41)
+### [6월17일 알고리즘 연습](https://eigen.tistory.com/43?category=1064467)
 
 ## 백준
 ### [6월 19일 알고리즘 연습](https://eigen.tistory.com/46)
