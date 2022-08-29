@@ -1,0 +1,51 @@
+/* 자손 결합자 */
+.outer li {
+  color: olivedrab;
+}
+
+/* 자식(1촌 자손) 결합자 */
+.outer > li {
+  color: dodgerblue;
+}
+
+.outer > li li {
+  text-decoration: underline;
+}
+
+/* 뒤따르는 모든 동생들 결합자 */
+.starter ~ li {
+  font-style: italic;
+}
+
+/* 뒤따르는 바로 다음 동생 결합자 */
+.starter + li {
+  font-weight: bold;
+}
+
+/* 첫 번째, 마지막 요소 가상 클래스 */
+ol li:first-child,
+ol li:last-child {
+  color: yellowgreen;
+}
+
+/* ~가 아닌 요소 가상 클래스 */
+.outer > li:not(:last-child) {
+  text-decoration: line-through;
+}
+
+ul:not(.outer) li {
+  font-weight: bold;
+}
+
+/* ~번째 요소 가상 클래스 */
+/* #, #n, #n+#, odd, even 등 시도해보기 */
+ol li:nth-child(3) {
+  font-weight: bold;
+  color: deeppink;
+}
+
+/* 마우스오버 가상 클래스 */
+li:hover {
+  font-weight: bold;
+  color: blue;
+}
