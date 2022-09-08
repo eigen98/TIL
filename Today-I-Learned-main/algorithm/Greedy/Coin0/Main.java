@@ -19,8 +19,8 @@ package Greedy.Coin0;
 import java.util.*;
 
 public class Main {
-
   static Scanner sc = new Scanner(System.in);
+
   // 동전 개수
   static int N;
   static int K; // 목표 금액
@@ -29,7 +29,6 @@ public class Main {
   static int total = 0;
 
   static void input() {
-
     N = sc.nextInt();
     K = sc.nextInt();
     numOfCoin = new int[N + 1];
@@ -37,16 +36,13 @@ public class Main {
     for (int i = 1; i <= N; i++) {
       value[i] = sc.nextInt();
     }
-
   }
   // 동전 개수의 최솟값을 출력한다.
   // 가장 큰 가치의 동전의 최댓값 -> 최적의 값.
 
   static void findAns() {
     int k = K;
-
     for (int i = N; i > 0; i--) {
-
       numOfCoin[i] = K / value[i];
       K = K - (numOfCoin[i] * value[i]);
       total = total + numOfCoin[i];
@@ -55,16 +51,12 @@ public class Main {
         System.out.println(total);
         return;
       }
-
     }
     System.out.println(total);
-
     // 한번 돌았는데 부족할 때 ? -> 존재 안 함.
-
   }
 
   public static void main(String[] args) {
-
     input();
     findAns();
   }
