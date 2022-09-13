@@ -57,6 +57,7 @@
 ### [Graphql이란?](https://eigen.tistory.com/25)
 ### [ReactorKit이란?](https://eigen.tistory.com/26)
 ### [ReactorKit예제](https://github.com/eigen98/TIL/tree/master/Today-I-Learned-main/IOS/exReactorKit)
+### [GitLab을 처음 만난 날](https://eigen.tistory.com/94)
 
 # 📒 회고
 
