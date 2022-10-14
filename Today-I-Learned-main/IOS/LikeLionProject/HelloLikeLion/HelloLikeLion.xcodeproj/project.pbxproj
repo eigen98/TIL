@@ -13,6 +13,7 @@
 		EE0A048B28F7D57000B0AE05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0A048928F7D57000B0AE05 /* Main.storyboard */; };
 		EE0A048D28F7D57000B0AE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE0A048C28F7D57000B0AE05 /* Assets.xcassets */; };
 		EE0A049028F7D57000B0AE05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0A048E28F7D57000B0AE05 /* LaunchScreen.storyboard */; };
+		EE0A049928F7DD3B00B0AE05 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0A049828F7DD3B00B0AE05 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EE0A048C28F7D57000B0AE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE0A048F28F7D57000B0AE05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE0A049128F7D57000B0AE05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE0A049828F7DD3B00B0AE05 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0A049928F7DD3B00B0AE05 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				EE0A048228F7D57000B0AE05 /* HelloLikeLion */,
 				EE0A048128F7D57000B0AE05 /* Products */,
+				EE0A049728F7DD3B00B0AE05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +69,14 @@
 				EE0A049128F7D57000B0AE05 /* Info.plist */,
 			);
 			path = HelloLikeLion;
+			sourceTree = "<group>";
+		};
+		EE0A049728F7DD3B00B0AE05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE0A049828F7DD3B00B0AE05 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Calculator_ios
 //
-//  Created by JeongMin Ko on 2022/02/14.
+//  Created by JeongMin Ko on 
 //
 
 import UIKit
@@ -87,6 +87,7 @@ class ViewController: UIViewController {
                     self.result = "\(firstOperand - secondOperand)"
                     
                 case .Divide :
+                    if secondOperand == 0 { break }
                     self.result = "\(firstOperand / secondOperand)"
                 case .Multiply :
                     self.result = "\(firstOperand * secondOperand)"
