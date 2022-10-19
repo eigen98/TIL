@@ -7,28 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE9F971F28FF76B300C42E5F /* ReHelloSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F971E28FF76B300C42E5F /* ReHelloSwiftUIApp.swift */; };
-		EE9F972128FF76B300C42E5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F972028FF76B300C42E5F /* ContentView.swift */; };
-		EE9F972328FF76B400C42E5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9F972228FF76B400C42E5F /* Assets.xcassets */; };
-		EE9F972628FF76B400C42E5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9F972528FF76B400C42E5F /* Preview Assets.xcassets */; };
-		EE9F972D28FF86A500C42E5F /* MyVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F972C28FF86A500C42E5F /* MyVStack.swift */; };
-		EE9F972F28FF8C3C00C42E5F /* ButtonStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9F972E28FF8C3C00C42E5F /* ButtonStack.swift */; };
-		EEE2E57928FFB31B00AF9766 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE2E57828FFB31B00AF9766 /* PracticeView.swift */; };
+		EE8C226F28FFD56000FDF8B4 /* SwiftUIStateBindingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C226E28FFD56000FDF8B4 /* SwiftUIStateBindingApp.swift */; };
+		EE8C227128FFD56000FDF8B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C227028FFD56000FDF8B4 /* ContentView.swift */; };
+		EE8C227328FFD56200FDF8B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8C227228FFD56200FDF8B4 /* Assets.xcassets */; };
+		EE8C227628FFD56200FDF8B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8C227528FFD56200FDF8B4 /* Preview Assets.xcassets */; };
+		EE8C227D28FFDA7900FDF8B4 /* WifiImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8C227C28FFDA7900FDF8B4 /* WifiImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EE9F971B28FF76B300C42E5F /* ReHelloSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReHelloSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE9F971E28FF76B300C42E5F /* ReHelloSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReHelloSwiftUIApp.swift; sourceTree = "<group>"; };
-		EE9F972028FF76B300C42E5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EE9F972228FF76B400C42E5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EE9F972528FF76B400C42E5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EE9F972C28FF86A500C42E5F /* MyVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVStack.swift; sourceTree = "<group>"; };
-		EE9F972E28FF8C3C00C42E5F /* ButtonStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStack.swift; sourceTree = "<group>"; };
-		EEE2E57828FFB31B00AF9766 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		EE8C226B28FFD56000FDF8B4 /* SwiftUIStateBinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIStateBinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8C226E28FFD56000FDF8B4 /* SwiftUIStateBindingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIStateBindingApp.swift; sourceTree = "<group>"; };
+		EE8C227028FFD56000FDF8B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EE8C227228FFD56200FDF8B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE8C227528FFD56200FDF8B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE8C227C28FFDA7900FDF8B4 /* WifiImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EE9F971828FF76B300C42E5F /* Frameworks */ = {
+		EE8C226828FFD56000FDF8B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,40 +34,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE9F971228FF76B300C42E5F = {
+		EE8C226228FFD56000FDF8B4 = {
 			isa = PBXGroup;
 			children = (
-				EE9F971D28FF76B300C42E5F /* ReHelloSwiftUI */,
-				EE9F971C28FF76B300C42E5F /* Products */,
+				EE8C226D28FFD56000FDF8B4 /* SwiftUIStateBinding */,
+				EE8C226C28FFD56000FDF8B4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EE9F971C28FF76B300C42E5F /* Products */ = {
+		EE8C226C28FFD56000FDF8B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE9F971B28FF76B300C42E5F /* ReHelloSwiftUI.app */,
+				EE8C226B28FFD56000FDF8B4 /* SwiftUIStateBinding.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE9F971D28FF76B300C42E5F /* ReHelloSwiftUI */ = {
+		EE8C226D28FFD56000FDF8B4 /* SwiftUIStateBinding */ = {
 			isa = PBXGroup;
 			children = (
-				EE9F971E28FF76B300C42E5F /* ReHelloSwiftUIApp.swift */,
-				EE9F972028FF76B300C42E5F /* ContentView.swift */,
-				EE9F972C28FF86A500C42E5F /* MyVStack.swift */,
-				EE9F972E28FF8C3C00C42E5F /* ButtonStack.swift */,
-				EEE2E57828FFB31B00AF9766 /* PracticeView.swift */,
-				EE9F972228FF76B400C42E5F /* Assets.xcassets */,
-				EE9F972428FF76B400C42E5F /* Preview Content */,
+				EE8C226E28FFD56000FDF8B4 /* SwiftUIStateBindingApp.swift */,
+				EE8C227028FFD56000FDF8B4 /* ContentView.swift */,
+				EE8C227228FFD56200FDF8B4 /* Assets.xcassets */,
+				EE8C227428FFD56200FDF8B4 /* Preview Content */,
+				EE8C227C28FFDA7900FDF8B4 /* WifiImageView.swift */,
 			);
-			path = ReHelloSwiftUI;
+			path = SwiftUIStateBinding;
 			sourceTree = "<group>";
 		};
-		EE9F972428FF76B400C42E5F /* Preview Content */ = {
+		EE8C227428FFD56200FDF8B4 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				EE9F972528FF76B400C42E5F /* Preview Assets.xcassets */,
+				EE8C227528FFD56200FDF8B4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -79,39 +73,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EE9F971A28FF76B300C42E5F /* ReHelloSwiftUI */ = {
+		EE8C226A28FFD56000FDF8B4 /* SwiftUIStateBinding */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE9F972928FF76B400C42E5F /* Build configuration list for PBXNativeTarget "ReHelloSwiftUI" */;
+			buildConfigurationList = EE8C227928FFD56200FDF8B4 /* Build configuration list for PBXNativeTarget "SwiftUIStateBinding" */;
 			buildPhases = (
-				EE9F971728FF76B300C42E5F /* Sources */,
-				EE9F971828FF76B300C42E5F /* Frameworks */,
-				EE9F971928FF76B300C42E5F /* Resources */,
+				EE8C226728FFD56000FDF8B4 /* Sources */,
+				EE8C226828FFD56000FDF8B4 /* Frameworks */,
+				EE8C226928FFD56000FDF8B4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ReHelloSwiftUI;
-			productName = ReHelloSwiftUI;
-			productReference = EE9F971B28FF76B300C42E5F /* ReHelloSwiftUI.app */;
+			name = SwiftUIStateBinding;
+			productName = SwiftUIStateBinding;
+			productReference = EE8C226B28FFD56000FDF8B4 /* SwiftUIStateBinding.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EE9F971328FF76B300C42E5F /* Project object */ = {
+		EE8C226328FFD56000FDF8B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					EE9F971A28FF76B300C42E5F = {
+					EE8C226A28FFD56000FDF8B4 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
-			buildConfigurationList = EE9F971628FF76B300C42E5F /* Build configuration list for PBXProject "ReHelloSwiftUI" */;
+			buildConfigurationList = EE8C226628FFD56000FDF8B4 /* Build configuration list for PBXProject "SwiftUIStateBinding" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,45 +113,43 @@
 				en,
 				Base,
 			);
-			mainGroup = EE9F971228FF76B300C42E5F;
-			productRefGroup = EE9F971C28FF76B300C42E5F /* Products */;
+			mainGroup = EE8C226228FFD56000FDF8B4;
+			productRefGroup = EE8C226C28FFD56000FDF8B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE9F971A28FF76B300C42E5F /* ReHelloSwiftUI */,
+				EE8C226A28FFD56000FDF8B4 /* SwiftUIStateBinding */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EE9F971928FF76B300C42E5F /* Resources */ = {
+		EE8C226928FFD56000FDF8B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE9F972628FF76B400C42E5F /* Preview Assets.xcassets in Resources */,
-				EE9F972328FF76B400C42E5F /* Assets.xcassets in Resources */,
+				EE8C227628FFD56200FDF8B4 /* Preview Assets.xcassets in Resources */,
+				EE8C227328FFD56200FDF8B4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EE9F971728FF76B300C42E5F /* Sources */ = {
+		EE8C226728FFD56000FDF8B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE9F972128FF76B300C42E5F /* ContentView.swift in Sources */,
-				EEE2E57928FFB31B00AF9766 /* PracticeView.swift in Sources */,
-				EE9F971F28FF76B300C42E5F /* ReHelloSwiftUIApp.swift in Sources */,
-				EE9F972F28FF8C3C00C42E5F /* ButtonStack.swift in Sources */,
-				EE9F972D28FF86A500C42E5F /* MyVStack.swift in Sources */,
+				EE8C227128FFD56000FDF8B4 /* ContentView.swift in Sources */,
+				EE8C227D28FFDA7900FDF8B4 /* WifiImageView.swift in Sources */,
+				EE8C226F28FFD56000FDF8B4 /* SwiftUIStateBindingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EE9F972728FF76B400C42E5F /* Debug */ = {
+		EE8C227728FFD56200FDF8B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -217,7 +209,7 @@
 			};
 			name = Debug;
 		};
-		EE9F972828FF76B400C42E5F /* Release */ = {
+		EE8C227828FFD56200FDF8B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -271,14 +263,14 @@
 			};
 			name = Release;
 		};
-		EE9F972A28FF76B400C42E5F /* Debug */ = {
+		EE8C227A28FFD56200FDF8B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ReHelloSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIStateBinding/Preview Content\"";
 				DEVELOPMENT_TEAM = Q57K6D2JP2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -292,7 +284,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codelion.ReHelloSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codelion.SwiftUIStateBinding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -300,14 +292,14 @@
 			};
 			name = Debug;
 		};
-		EE9F972B28FF76B400C42E5F /* Release */ = {
+		EE8C227B28FFD56200FDF8B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ReHelloSwiftUI/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIStateBinding/Preview Content\"";
 				DEVELOPMENT_TEAM = Q57K6D2JP2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -321,7 +313,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.codelion.ReHelloSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codelion.SwiftUIStateBinding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -332,25 +324,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE9F971628FF76B300C42E5F /* Build configuration list for PBXProject "ReHelloSwiftUI" */ = {
+		EE8C226628FFD56000FDF8B4 /* Build configuration list for PBXProject "SwiftUIStateBinding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE9F972728FF76B400C42E5F /* Debug */,
-				EE9F972828FF76B400C42E5F /* Release */,
+				EE8C227728FFD56200FDF8B4 /* Debug */,
+				EE8C227828FFD56200FDF8B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE9F972928FF76B400C42E5F /* Build configuration list for PBXNativeTarget "ReHelloSwiftUI" */ = {
+		EE8C227928FFD56200FDF8B4 /* Build configuration list for PBXNativeTarget "SwiftUIStateBinding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE9F972A28FF76B400C42E5F /* Debug */,
-				EE9F972B28FF76B400C42E5F /* Release */,
+				EE8C227A28FFD56200FDF8B4 /* Debug */,
+				EE8C227B28FFD56200FDF8B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EE9F971328FF76B300C42E5F /* Project object */;
+	rootObject = EE8C226328FFD56000FDF8B4 /* Project object */;
 }

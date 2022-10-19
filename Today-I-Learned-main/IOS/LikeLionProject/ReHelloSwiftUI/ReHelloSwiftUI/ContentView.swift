@@ -26,20 +26,7 @@ struct ContentView: View {
                 }
             }
             .padding()
-            
-            MyVStack(content: {
-                Image(systemName: "넣고싶은 이미지1")
-            })
-            MyVStack(content: {
-                Image(systemName: "넣고싶은 이미지2")
-            })
-            MyVStack(content: {
-                Image(systemName: "넣고싶은 이미지3")
-            })
-            MyVStack(content: {
-                Image(systemName: "넣고싶은 이미지4")
-            })
-            
+           
         }
         
     }
