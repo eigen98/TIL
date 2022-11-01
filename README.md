@@ -62,6 +62,7 @@
 ### [iOS 개발자와 협업_ Certificate, Provisioning Profile](https://eigen.tistory.com/97)
 
 ### [SwiftUI를 처음 만나서](https://eigen.tistory.com/109?category=1097846)
+### [SwiftUI의 특징과 배경에 대해 공감해보면서](https://eigen.tistory.com/110)
 
 # 📒 회고
 
