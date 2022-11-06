@@ -100,6 +100,7 @@
 ### [6월 19일 알고리즘 연습](https://eigen.tistory.com/46)
 
 # Error
-[]
+### [The certificate for this server is invalid. You might be connecting to a server that is pretending ...
+](https://eigen.tistory.com/113)
 
 # 고민
