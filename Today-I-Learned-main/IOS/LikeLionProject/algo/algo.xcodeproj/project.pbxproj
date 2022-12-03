@@ -1,0 +1,76 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXFileReference section */
+		EE6F68AB29382E6F004EAFB1 /* algo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = algo.swift; sourceTree = "<group>"; };
+		EE6F68AC29382E8D004EAFB1 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		EE6F68A429382E61004EAFB1 = {
+			isa = PBXGroup;
+			children = (
+				EE6F68AC29382E8D004EAFB1 /* MyPlayground.playground */,
+				EE6F68AB29382E6F004EAFB1 /* algo.swift */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		EE6F68A529382E61004EAFB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+			};
+			buildConfigurationList = EE6F68A829382E61004EAFB1 /* Build configuration list for PBXProject "algo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE6F68A429382E61004EAFB1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		EE6F68A929382E61004EAFB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		EE6F68AA29382E61004EAFB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE6F68A829382E61004EAFB1 /* Build configuration list for PBXProject "algo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE6F68A929382E61004EAFB1 /* Debug */,
+				EE6F68AA29382E61004EAFB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE6F68A529382E61004EAFB1 /* Project object */;
+}
