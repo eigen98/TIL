@@ -15,31 +15,21 @@ var calResult = 0
 arr = [-7, -3, -2, 5, 8]
 
 //k + 1 번째 원소 더하기
-func rec_func(_ k : Int){
+func rec_func(_ k : Int, _ total : Int){
+    
     if k == N {
-        
+        if total == S { count += 1 }
         return
     }else{
-
-        for cand in k..<N{
-            var num = arr[cand]
-            if !selected[cand]{
-                selected[cand] = true
-                calResult += num
-                print("calResult : \(calResult)")
-                if calResult == S{
-                    print("count 증가 : \(calResult)")
-                    count += 1
-                }
-                rec_func(k + 1)
-                selected[cand] = false
-                calResult -= num
-                
-            }
-            
-        }
+        
+        var num = arr[k]
+        rec_func( k + 1, total + num )
+        rec_func( k + 1, total )
         
     }
 }
-rec_func(0)
+rec_func(0, 0)
+if S == 0 {
+    count -= 1
+}
 print(count)
