@@ -37,7 +37,7 @@ func solution(){
         for j in 0..<i{
             
             if A[i] > A[j]{
-                Dp[i] = max(Dp[j] + 1, Dp[i])
+                Dp[i] =  max(Dp[j] + A[i], Dp[i])
             }
             
         }
