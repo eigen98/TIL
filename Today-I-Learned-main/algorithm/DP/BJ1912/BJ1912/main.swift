@@ -24,6 +24,36 @@
  */
 
 import Foundation
-
-print("Hello, World!")
-
+func solution(){
+    var n = Int(readLine()!)!
+    var A = [0] + readLine()!.split(separator: " ").map{Int(String($0))!}
+    
+    
+    var best = 0
+    var total = 0
+    var maxValue = A.max()!
+    if maxValue < 0{
+        print(maxValue)
+        return
+    }
+    
+    for i in 1...n{
+        
+        total += A[i]
+       
+        
+        if total < 0{
+            total = 0
+        }
+        
+        if best < total {
+            best = total
+        }
+        
+    }
+    
+    
+    print(best)
+    
+}
+solution()

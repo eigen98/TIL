@@ -1,0 +1,676 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE76660D296CE8EA0020106A /* MyDiaryForTCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76660C296CE8EA0020106A /* MyDiaryForTCAApp.swift */; };
+		EE76660F296CE8EA0020106A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76660E296CE8EA0020106A /* ContentView.swift */; };
+		EE766611296CE8EA0020106A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE766610296CE8EA0020106A /* Assets.xcassets */; };
+		EE766614296CE8EA0020106A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE766613296CE8EA0020106A /* Preview Assets.xcassets */; };
+		EE76661C296CE9560020106A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE76661B296CE9560020106A /* ComposableArchitecture */; };
+		EE76661E296CEA260020106A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE76661D296CEA260020106A /* GoogleService-Info.plist */; };
+		EE766621296CEAEF0020106A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EE766620296CEAEF0020106A /* FirebaseAnalytics */; };
+		EE766623296CEAEF0020106A /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE766622296CEAEF0020106A /* FirebaseAnalyticsSwift */; };
+		EE766625296CEAEF0020106A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EE766624296CEAEF0020106A /* FirebaseAuth */; };
+		EE766627296CEAEF0020106A /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EE766626296CEAEF0020106A /* FirebaseAuthCombine-Community */; };
+		EE766629296CEAEF0020106A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EE766628296CEAEF0020106A /* FirebaseDatabase */; };
+		EE76662B296CEAEF0020106A /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE76662A296CEAEF0020106A /* FirebaseDatabaseSwift */; };
+		EE76662D296CEAF00020106A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EE76662C296CEAF00020106A /* FirebaseFirestore */; };
+		EE76662F296CEAF00020106A /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EE76662E296CEAF00020106A /* FirebaseFirestoreCombine-Community */; };
+		EE766631296CEAF00020106A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE766630296CEAF00020106A /* FirebaseFirestoreSwift */; };
+		EE766633296CEAF00020106A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = EE766632296CEAF00020106A /* FirebaseStorage */; };
+		EE766635296CEAF00020106A /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = EE766634296CEAF00020106A /* FirebaseStorageCombine-Community */; };
+		EE766638296CED0E0020106A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = EE766637296CED0E0020106A /* GoogleSignIn */; };
+		EE76663A296CED0E0020106A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EE766639296CED0E0020106A /* GoogleSignInSwift */; };
+		EE76668A296CF25B0020106A /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE766689296CF25B0020106A /* DiaryView.swift */; };
+		EE76668C296CF2840020106A /* DiaryReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76668B296CF2840020106A /* DiaryReactor.swift */; };
+		EE76668F296CF2C30020106A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76668E296CF2C30020106A /* Diary.swift */; };
+		EE766691296CF56C0020106A /* DiaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE766690296CF56C0020106A /* DiaryService.swift */; };
+		EE766694296CF6E60020106A /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = EE766693296CF6E60020106A /* CombineSchedulers */; };
+		EE766696296CF8A10020106A /* DiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE766695296CF8A10020106A /* DiaryCell.swift */; };
+		EE766699296CFA460020106A /* CreateDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE766698296CFA460020106A /* CreateDiaryView.swift */; };
+		EE76669B296CFA6D0020106A /* CreateDiaryReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE76669A296CFA6D0020106A /* CreateDiaryReactor.swift */; };
+		EECEE7E7296D1A0700992422 /* PolicyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEE7E6296D1A0700992422 /* PolicyDetailView.swift */; };
+		EECEE7EA296D1C9F00992422 /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEE7E9296D1C9F00992422 /* LoginReactor.swift */; };
+		EECEE7EC296D1DC300992422 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEE7EB296D1DC300992422 /* AuthService.swift */; };
+		EECEE7EE296D3C5200992422 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEE7ED296D3C5200992422 /* LoginViewModel.swift */; };
+		EECEE7F1296D3C8C00992422 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECEE7F0296D3C8C00992422 /* UserManager.swift */; };
+		EECEE7F4296D3CDB00992422 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EECEE7F3296D3CDB00992422 /* KeychainSwift */; };
+		EED58B51296D0D3E00018414 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED58B50296D0D3E00018414 /* LoginView.swift */; };
+		EED58B54296D0FD900018414 /* PolicyAgreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED58B53296D0FD900018414 /* PolicyAgreeView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE766609296CE8EA0020106A /* MyDiaryForTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDiaryForTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE76660C296CE8EA0020106A /* MyDiaryForTCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryForTCAApp.swift; sourceTree = "<group>"; };
+		EE76660E296CE8EA0020106A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EE766610296CE8EA0020106A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE766613296CE8EA0020106A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE76661D296CEA260020106A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EE76663C296CEF160020106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EE766689296CF25B0020106A /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		EE76668B296CF2840020106A /* DiaryReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryReactor.swift; sourceTree = "<group>"; };
+		EE76668E296CF2C30020106A /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		EE766690296CF56C0020106A /* DiaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryService.swift; sourceTree = "<group>"; };
+		EE766695296CF8A10020106A /* DiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCell.swift; sourceTree = "<group>"; };
+		EE766698296CFA460020106A /* CreateDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryView.swift; sourceTree = "<group>"; };
+		EE76669A296CFA6D0020106A /* CreateDiaryReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryReactor.swift; sourceTree = "<group>"; };
+		EECEE7E6296D1A0700992422 /* PolicyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyDetailView.swift; sourceTree = "<group>"; };
+		EECEE7E9296D1C9F00992422 /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
+		EECEE7EB296D1DC300992422 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		EECEE7ED296D3C5200992422 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EECEE7F0296D3C8C00992422 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		EED58B50296D0D3E00018414 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EED58B53296D0FD900018414 /* PolicyAgreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyAgreeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE766606296CE8EA0020106A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE76662B296CEAEF0020106A /* FirebaseDatabaseSwift in Frameworks */,
+				EE766629296CEAEF0020106A /* FirebaseDatabase in Frameworks */,
+				EE766623296CEAEF0020106A /* FirebaseAnalyticsSwift in Frameworks */,
+				EE766638296CED0E0020106A /* GoogleSignIn in Frameworks */,
+				EE76662F296CEAF00020106A /* FirebaseFirestoreCombine-Community in Frameworks */,
+				EE766621296CEAEF0020106A /* FirebaseAnalytics in Frameworks */,
+				EECEE7F4296D3CDB00992422 /* KeychainSwift in Frameworks */,
+				EE766631296CEAF00020106A /* FirebaseFirestoreSwift in Frameworks */,
+				EE76661C296CE9560020106A /* ComposableArchitecture in Frameworks */,
+				EE76662D296CEAF00020106A /* FirebaseFirestore in Frameworks */,
+				EE76663A296CED0E0020106A /* GoogleSignInSwift in Frameworks */,
+				EE766633296CEAF00020106A /* FirebaseStorage in Frameworks */,
+				EE766694296CF6E60020106A /* CombineSchedulers in Frameworks */,
+				EE766625296CEAEF0020106A /* FirebaseAuth in Frameworks */,
+				EE766635296CEAF00020106A /* FirebaseStorageCombine-Community in Frameworks */,
+				EE766627296CEAEF0020106A /* FirebaseAuthCombine-Community in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE766600296CE8EA0020106A = {
+			isa = PBXGroup;
+			children = (
+				EE76660B296CE8EA0020106A /* MyDiaryForTCA */,
+				EE76660A296CE8EA0020106A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE76660A296CE8EA0020106A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE766609296CE8EA0020106A /* MyDiaryForTCA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE76660B296CE8EA0020106A /* MyDiaryForTCA */ = {
+			isa = PBXGroup;
+			children = (
+				EECEE7F5296D4EC700992422 /* repository */,
+				EECEE7EF296D3C8000992422 /* Configuration */,
+				EECEE7E8296D1C0900992422 /* Service */,
+				EED58B4F296D0C3C00018414 /* OnBoarding */,
+				EE76669C296CFC020020106A /* DiaryList */,
+				EE766697296CFA330020106A /* CreateDiary */,
+				EE76668D296CF2B30020106A /* Model */,
+				EE76663C296CEF160020106A /* Info.plist */,
+				EE76660C296CE8EA0020106A /* MyDiaryForTCAApp.swift */,
+				EE76660E296CE8EA0020106A /* ContentView.swift */,
+				EE766610296CE8EA0020106A /* Assets.xcassets */,
+				EE76661D296CEA260020106A /* GoogleService-Info.plist */,
+				EE766612296CE8EA0020106A /* Preview Content */,
+			);
+			path = MyDiaryForTCA;
+			sourceTree = "<group>";
+		};
+		EE766612296CE8EA0020106A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EE766613296CE8EA0020106A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE76668D296CF2B30020106A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE76668E296CF2C30020106A /* Diary.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE766697296CFA330020106A /* CreateDiary */ = {
+			isa = PBXGroup;
+			children = (
+				EE766698296CFA460020106A /* CreateDiaryView.swift */,
+				EE76669A296CFA6D0020106A /* CreateDiaryReactor.swift */,
+			);
+			path = CreateDiary;
+			sourceTree = "<group>";
+		};
+		EE76669C296CFC020020106A /* DiaryList */ = {
+			isa = PBXGroup;
+			children = (
+				EE766695296CF8A10020106A /* DiaryCell.swift */,
+				EE76668B296CF2840020106A /* DiaryReactor.swift */,
+				EE766689296CF25B0020106A /* DiaryView.swift */,
+			);
+			path = DiaryList;
+			sourceTree = "<group>";
+		};
+		EECEE7E8296D1C0900992422 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EE766690296CF56C0020106A /* DiaryService.swift */,
+				EECEE7EB296D1DC300992422 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EECEE7EF296D3C8000992422 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EECEE7F0296D3C8C00992422 /* UserManager.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		EECEE7F5296D4EC700992422 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		EED58B4F296D0C3C00018414 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				EED58B52296D0F9A00018414 /* PolicyAgree */,
+				EED58B50296D0D3E00018414 /* LoginView.swift */,
+				EECEE7E9296D1C9F00992422 /* LoginReactor.swift */,
+				EECEE7ED296D3C5200992422 /* LoginViewModel.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		EED58B52296D0F9A00018414 /* PolicyAgree */ = {
+			isa = PBXGroup;
+			children = (
+				EED58B53296D0FD900018414 /* PolicyAgreeView.swift */,
+				EECEE7E6296D1A0700992422 /* PolicyDetailView.swift */,
+			);
+			path = PolicyAgree;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE766608296CE8EA0020106A /* MyDiaryForTCA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE766617296CE8EA0020106A /* Build configuration list for PBXNativeTarget "MyDiaryForTCA" */;
+			buildPhases = (
+				EE766605296CE8EA0020106A /* Sources */,
+				EE766606296CE8EA0020106A /* Frameworks */,
+				EE766607296CE8EA0020106A /* Resources */,
+				EE76663B296CEF010020106A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyDiaryForTCA;
+			packageProductDependencies = (
+				EE76661B296CE9560020106A /* ComposableArchitecture */,
+				EE766620296CEAEF0020106A /* FirebaseAnalytics */,
+				EE766622296CEAEF0020106A /* FirebaseAnalyticsSwift */,
+				EE766624296CEAEF0020106A /* FirebaseAuth */,
+				EE766626296CEAEF0020106A /* FirebaseAuthCombine-Community */,
+				EE766628296CEAEF0020106A /* FirebaseDatabase */,
+				EE76662A296CEAEF0020106A /* FirebaseDatabaseSwift */,
+				EE76662C296CEAF00020106A /* FirebaseFirestore */,
+				EE76662E296CEAF00020106A /* FirebaseFirestoreCombine-Community */,
+				EE766630296CEAF00020106A /* FirebaseFirestoreSwift */,
+				EE766632296CEAF00020106A /* FirebaseStorage */,
+				EE766634296CEAF00020106A /* FirebaseStorageCombine-Community */,
+				EE766637296CED0E0020106A /* GoogleSignIn */,
+				EE766639296CED0E0020106A /* GoogleSignInSwift */,
+				EE766693296CF6E60020106A /* CombineSchedulers */,
+				EECEE7F3296D3CDB00992422 /* KeychainSwift */,
+			);
+			productName = MyDiaryForTCA;
+			productReference = EE766609296CE8EA0020106A /* MyDiaryForTCA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE766601296CE8EA0020106A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					EE766608296CE8EA0020106A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = EE766604296CE8EA0020106A /* Build configuration list for PBXProject "MyDiaryForTCA" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE766600296CE8EA0020106A;
+			packageReferences = (
+				EE76661A296CE9560020106A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EE766636296CED0E0020106A /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */,
+				EE766692296CF6E60020106A /* XCRemoteSwiftPackageReference "combine-schedulers" */,
+				EECEE7F2296D3CDB00992422 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
+			productRefGroup = EE76660A296CE8EA0020106A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE766608296CE8EA0020106A /* MyDiaryForTCA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE766607296CE8EA0020106A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE766614296CE8EA0020106A /* Preview Assets.xcassets in Resources */,
+				EE766611296CE8EA0020106A /* Assets.xcassets in Resources */,
+				EE76661E296CEA260020106A /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EE76663B296CEF010020106A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE766605296CE8EA0020106A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE766699296CFA460020106A /* CreateDiaryView.swift in Sources */,
+				EE76660F296CE8EA0020106A /* ContentView.swift in Sources */,
+				EED58B54296D0FD900018414 /* PolicyAgreeView.swift in Sources */,
+				EE766696296CF8A10020106A /* DiaryCell.swift in Sources */,
+				EE76668F296CF2C30020106A /* Diary.swift in Sources */,
+				EECEE7EA296D1C9F00992422 /* LoginReactor.swift in Sources */,
+				EECEE7F1296D3C8C00992422 /* UserManager.swift in Sources */,
+				EE76660D296CE8EA0020106A /* MyDiaryForTCAApp.swift in Sources */,
+				EE76669B296CFA6D0020106A /* CreateDiaryReactor.swift in Sources */,
+				EECEE7EE296D3C5200992422 /* LoginViewModel.swift in Sources */,
+				EECEE7E7296D1A0700992422 /* PolicyDetailView.swift in Sources */,
+				EE76668C296CF2840020106A /* DiaryReactor.swift in Sources */,
+				EE76668A296CF25B0020106A /* DiaryView.swift in Sources */,
+				EED58B51296D0D3E00018414 /* LoginView.swift in Sources */,
+				EE766691296CF56C0020106A /* DiaryService.swift in Sources */,
+				EECEE7EC296D1DC300992422 /* AuthService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EE766615296CE8EA0020106A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE766616296CE8EA0020106A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE766618296CE8EA0020106A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyDiaryForTCA/Preview Content\"";
+				DEVELOPMENT_TEAM = Q57K6D2JP2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyDiaryForTCA/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eigenjm.MyDiaryForTCA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE766619296CE8EA0020106A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyDiaryForTCA/Preview Content\"";
+				DEVELOPMENT_TEAM = Q57K6D2JP2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyDiaryForTCA/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eigenjm.MyDiaryForTCA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE766604296CE8EA0020106A /* Build configuration list for PBXProject "MyDiaryForTCA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE766615296CE8EA0020106A /* Debug */,
+				EE766616296CE8EA0020106A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE766617296CE8EA0020106A /* Build configuration list for PBXNativeTarget "MyDiaryForTCA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE766618296CE8EA0020106A /* Debug */,
+				EE766619296CE8EA0020106A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE76661A296CE9560020106A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+		EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		EE766636296CED0E0020106A /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignin-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+		EE766692296CF6E60020106A /* XCRemoteSwiftPackageReference "combine-schedulers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/combine-schedulers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
+		EECEE7F2296D3CDB00992422 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE76661B296CE9560020106A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661A296CE9560020106A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		EE766620296CEAEF0020106A /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EE766622296CEAEF0020106A /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		EE766624296CEAEF0020106A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		EE766626296CEAEF0020106A /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		EE766628296CEAEF0020106A /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		EE76662A296CEAEF0020106A /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		EE76662C296CEAF00020106A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		EE76662E296CEAF00020106A /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		EE766630296CEAF00020106A /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		EE766632296CEAF00020106A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		EE766634296CEAF00020106A /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE76661F296CEAEF0020106A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		EE766637296CED0E0020106A /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE766636296CED0E0020106A /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */;
+			productName = GoogleSignIn;
+		};
+		EE766639296CED0E0020106A /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE766636296CED0E0020106A /* XCRemoteSwiftPackageReference "GoogleSignin-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		EE766693296CF6E60020106A /* CombineSchedulers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE766692296CF6E60020106A /* XCRemoteSwiftPackageReference "combine-schedulers" */;
+			productName = CombineSchedulers;
+		};
+		EECEE7F3296D3CDB00992422 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EECEE7F2296D3CDB00992422 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EE766601296CE8EA0020106A /* Project object */;
+}
