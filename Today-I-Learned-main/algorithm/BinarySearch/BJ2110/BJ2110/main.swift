@@ -47,57 +47,52 @@ func solution(){
         
     }
     Arr = Arr.sorted()
-    var L = 1
-    var R = Arr.last! - Arr.first!
-    
-    while(L < R){
-        var mid = (L + R) / 2
-        if search(len: mid) {
-            R = mid - 1
-        }else{
+    var L =  0
+    var R = 1000000000
+    while(L <= R){
+        print("L : \(L), R : \(R)")
+        var mid = (R + L) / 2
+        
+        if isPossible(len: mid){
             L = mid + 1
-        }
-        print("L :\(L) R :\(R)")
-    }
-    
-    
-    
-    
-    
-    func search(len : Int) -> Bool{
-        
-    
-        var now = 0
-        var count = C
-        print("search")
-        while(count > 0 && now < N - 1){
-            for j in now + 1..<Arr.count{
-                var gap = Arr[j] - Arr[now]
-                print("gap")
-                if gap >= len{
-                    //공유기 설치 가능하다면
-    //                    print("Arr[idx] : \(Arr[i])  Arr[idx - 1] : \( Arr[]) ")
-                    count -= 1 //남은 공유기 개수 감소
-                    now = j - 1
-                    print(gap)
-                   break
-                }
-            }
-            now += 1
-        }
-        if count > 0{
-            return false
+            
         }else{
-            return true
+            R = mid - 1
         }
-        
-        
         
         
     }
     
-    
-    print(L)
+    print(L - 1)
+    /*
+     len 간격으로 공유기 설치 여부 체크
+     */
+    func isPossible(len : Int) -> Bool{
+        var count = C - 1 //첫번째 공유기 빼기
+        
+        var preIdx = 0
+        for idx in 1...Arr.count - 1{
+            
+            
+            
+            if Arr[idx] - Arr[preIdx] >= len{
+                preIdx = idx
+                count -= 1
+            }
+           
+            
+            
+        }
+        
+        if count <= 0 {
+            print("true")
+            return true
+        }else{
+            print("false")
+            return false
+        }
+    }
+   
     
 }
 
