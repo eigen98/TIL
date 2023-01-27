@@ -14,6 +14,8 @@
 
  수빈이가 지금 보고 있는 채널은 100번이다.
 
+
+ 
  입력
  첫째 줄에 수빈이가 이동하려고 하는 채널 N (0 ≤ N ≤ 500,000)이 주어진다.  둘째 줄에는 고장난 버튼의 개수 M (0 ≤ M ≤ 10)이 주어진다. 고장난 버튼이 있는 경우에는 셋째 줄에는 고장난 버튼이 주어지며, 같은 버튼이 여러 번 주어지는 경우는 없다.
 
@@ -26,24 +28,29 @@
  6 7 8
  예제 출력 1
  6
+ 
  예제 입력 2
  100
  5
  0 1 2 3 4
  예제 출력 2
  0
+ 
  예제 입력 3
  500000
  8
  0 2 3 4 6 7 8 9
  예제 출력 3
  11117
+ 
  예제 입력 4
  100
  3
  1 0 5
  예제 출력 4
  0
+ 
+ 
  예제 입력 5
  14124
  0
@@ -63,14 +70,30 @@
  2228
  */
 
+/*
+ 500000
+ 1 2 3 4 5.  7 ,,,
+ 
+ 각 자리수 마다 가장 차이가 작은 숫자 찾기
+ 4 , 1 or 9 앞자리가 차이가 난다면 9 not 1
+ */
+
 import Foundation
 func solution(){
-    var N = Int(readLine()!)!
-    var M = Int(readLine()!)!
-    var arr = readLine()!.split(separator: " ").map{ Int(String($0))!}
+    var input = Int(readLine()!)! // 80000
+    var N = input
+    var NArr = String(input).map{ Int(String($0))!}
     
+    var M = Int(readLine()!)! // 2
+    var arr = readLine()!.split(separator: " ").map{ Int(String($0))!}
+    //8 9
     var nowPosition = 100
     
+    var preGap = 0
+    
+    for num in NArr{
+        
+    }
     
 }
 
