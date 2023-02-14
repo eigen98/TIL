@@ -43,7 +43,7 @@ func solution(){
     var N = Int(readLine()!)!
     var adjArr = [[Edge]](repeating: [Edge](), count: N + 1) //0 깍두기
     var visited = [Bool](repeating: false, count: N + 1)
-    
+    var finalNode = 0
     //인접 리스트 만들기
     for i in 1...N{
         var input = readLine()!.split(separator: " ").map{ Int(String($0))!}
@@ -52,11 +52,13 @@ func solution(){
         var dist = 0
         
         for j in 1...input.count - 1{
+            if input[j] == -1{ continue }
             if j % 2 == 1{  to = input[j] }
             if j % 2 == 0{
                 dist = input[j]
-                var edge = Edge(to: to, weight: dist)
+                let edge = Edge(to: to, weight: dist)
                 adjArr[from].append(edge)
+               
             }
             
         }
@@ -86,20 +88,27 @@ func solution(){
         }
         if nextRoute != -1 {
             dfs(start: nextRoute, edgeDist: edgeDist + nextMax)
+            visited[nextRoute] = false
         }
         
-        visited[nextRoute] = false
-        
-        maximum = max(maximum, edgeDist)
-    }
-    
-    for i in 1...N{
-        if !visited[i]{
-            dfs(start: i, edgeDist: 0)
+        if maximum < edgeDist{
+            finalNode = start
+            
+            maximum = edgeDist
+            print(maximum)
         }
-
+        
+       
     }
     
-    print(maximum)
+   
+    dfs(start: 1, edgeDist: 0)
+    
+    visited = [Bool](repeating: false, count: N + 1)
+    maximum = 0
+    
+    dfs(start: finalNode, edgeDist: 0)
+    
+    //print(maximum)
 }
 solution()
