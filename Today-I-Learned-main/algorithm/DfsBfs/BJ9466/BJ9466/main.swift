@@ -40,63 +40,62 @@ import Foundation
 
 func solution(){
     var T = Int(readLine()!)!
-    var ans = [Int]()
     
-    for i in 1...T{
-        var n = Int(readLine()!)!
-        var A = readLine()!.split(separator: " ").map{ Int(String($0))!}
-        var visited = [Bool](repeating: false, count: n + 1)
-        var ansSet = 0
-        var adjList = [[Int]](repeating: [Int](), count: n + 1) //0 깍두기
-        for (idx, value) in A.enumerated(){
-            adjList[idx + 1].append(value)
-            
-        }
-       
+    var answer = [Int]()
+    
+    for _ in 1...T{
         
-        //사이클 확인
-        var count = 0
-        func dfs(start: Int, team : [Int]){
-            
-            if start == team.first ?? 0{
-                count += team.count
-                print(team)
-                return
-            }
-            
-            if visited[start]{
-                return
-            }
-            
-            visited[start] = true
-            var members = team
-            members.append(start)
-            
-            if let next = adjList[start].first{
-                
-                    dfs(start: next, team: members)
-                
-                
-            }
-            
+        
+        var result = 0
+        var N = Int(readLine()!)! //학생수
+        var input = readLine()!.split(separator: " ").map{Int(String($0))!}
+        var adjArr = [[Int]](repeating: [Int]() , count: N + 1)
+        var isCheck = [Bool](repeating: false, count: N + 1)
+        
+        for i in 1...N{
+            var to = input[i - 1]
+            var from = i
+            adjArr[from].append(to)
         }
         
-        for i in 1...n{
-            if !visited[i]{
-                dfs(start: i, team: [Int]())
+        func dfs(target : Int, visited : [Int]){
+            
+            var newVisited = visited
+            newVisited.append(target)
+            
+            isCheck[target] = true
+            
+            
+            var next = adjArr[target][0]
+            if isCheck[next] {
+                for i in 0..<newVisited.count{
+                    if newVisited[i] == next{
+                        var count = newVisited.count - i
+                        result += count
+                        return
+                    }
+                    
+                }
+            }else{
+                dfs(target: next, visited: newVisited)
             }
+            
             
         }
         
-        ans.append(n - count)
-        
+        for i in 1...N{
+            if !isCheck[i]{
+                dfs(target: i, visited: [])
+            }
+        }
+        answer.append(N - result)
         
     }
     
-    
-    for i in ans{
-        print(i)
+    for i in 0..<answer.count{
+        print(answer[i])
     }
+    
 }
 
 solution()

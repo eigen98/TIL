@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SpoqaHanSansNeo-Bold.ttf">
+            <string>SpoqaHanSansNeo-Bold</string>
+        </array>
+        <array key="SpoqaHanSansNeo-Medium.ttf">
+            <string>SpoqaHanSansNeo-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="87" id="KGk-i7-Jjw" customClass="AlbumTableViewCell" customModule="CustomAlbumImp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="344" height="87"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tK-IS-yql">
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="87"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u5w-1W-Iz2">
+                                <rect key="frame" x="16" y="12" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="aXD-zo-FIb"/>
+                                    <constraint firstAttribute="width" constant="64" id="rOX-Vf-rkd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBm-cN-5CX">
+                                <rect key="frame" x="92" y="23" width="38" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="v2j-3B-R1x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="14"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xo-2P-POa">
+                                <rect key="frame" x="92" y="47" width="31.333333333333329" height="14"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Medium" family="Spoqa Han Sans Neo" pointSize="12"/>
+                                <color key="textColor" red="0.56078431370000004" green="0.56470588239999997" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u5w-1W-Iz2" firstAttribute="leading" secondItem="9tK-IS-yql" secondAttribute="leading" constant="16" id="02k-0q-Ha2"/>
+                            <constraint firstItem="u5w-1W-Iz2" firstAttribute="top" secondItem="9tK-IS-yql" secondAttribute="top" constant="12" id="6lI-iC-JwP"/>
+                            <constraint firstItem="3xo-2P-POa" firstAttribute="leading" secondItem="u5w-1W-Iz2" secondAttribute="trailing" constant="12" id="EWS-mN-riD"/>
+                            <constraint firstItem="KBm-cN-5CX" firstAttribute="leading" secondItem="u5w-1W-Iz2" secondAttribute="trailing" constant="12" id="KZn-2V-cjK"/>
+                            <constraint firstItem="3xo-2P-POa" firstAttribute="top" secondItem="KBm-cN-5CX" secondAttribute="bottom" constant="4" id="mba-iM-KmT"/>
+                            <constraint firstAttribute="height" constant="87" id="qui-hj-c47"/>
+                            <constraint firstItem="KBm-cN-5CX" firstAttribute="top" secondItem="9tK-IS-yql" secondAttribute="top" constant="23" id="rSV-Ef-Z2k"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9tK-IS-yql" secondAttribute="trailing" id="ctN-GN-KOn"/>
+                    <constraint firstItem="9tK-IS-yql" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="goU-dS-DoB"/>
+                    <constraint firstItem="9tK-IS-yql" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kUO-K6-Rfo"/>
+                    <constraint firstAttribute="bottom" secondItem="9tK-IS-yql" secondAttribute="bottom" id="xQX-19-9qG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="albumImageView" destination="u5w-1W-Iz2" id="1hO-uR-hf2"/>
+                <outlet property="albumLabel" destination="KBm-cN-5CX" id="NpK-Bt-p9A"/>
+                <outlet property="countLabel" destination="3xo-2P-POa" id="JyD-cF-foZ"/>
+            </connections>
+            <point key="canvasLocation" x="19.847328244274809" y="34.859154929577464"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

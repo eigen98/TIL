@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SpoqaHanSansNeo-Bold.ttf">
+            <string>SpoqaHanSansNeo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoCollectionViewCell" customModule="CustomAlbumImp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="205"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="220" height="205"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4My-21-zu8">
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="205"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0EX-ck-Nh9">
+                                <rect key="frame" x="182" y="12" width="26" height="26"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98C-gx-LXa">
+                                        <rect key="frame" x="13" y="13" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="XQ8-Vf-1y0"/>
+                                    <constraint firstAttribute="width" constant="26" id="fZx-hP-abC"/>
+                                    <constraint firstItem="98C-gx-LXa" firstAttribute="centerY" secondItem="0EX-ck-Nh9" secondAttribute="centerY" id="k2m-QP-B3D"/>
+                                    <constraint firstItem="98C-gx-LXa" firstAttribute="centerX" secondItem="0EX-ck-Nh9" secondAttribute="centerX" id="omM-dY-Pza"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HDf-Ok-rFJ">
+                                <rect key="frame" x="0.0" y="0.0" width="220" height="205"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="27r-Ik-hxB">
+                                <rect key="frame" x="94" y="87.666666666666671" width="32" height="29.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="bB7-TJ-mTZ"/>
+                                    <constraint firstAttribute="height" constant="32" id="g10-dr-c5T"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="HDf-Ok-rFJ" secondAttribute="bottom" id="0pq-xc-JyE"/>
+                            <constraint firstItem="27r-Ik-hxB" firstAttribute="centerY" secondItem="4My-21-zu8" secondAttribute="centerY" id="1Z9-vm-98b"/>
+                            <constraint firstItem="27r-Ik-hxB" firstAttribute="centerX" secondItem="4My-21-zu8" secondAttribute="centerX" id="7mS-Rd-q15"/>
+                            <constraint firstItem="HDf-Ok-rFJ" firstAttribute="leading" secondItem="4My-21-zu8" secondAttribute="leading" id="MNR-4v-dFT"/>
+                            <constraint firstItem="0EX-ck-Nh9" firstAttribute="top" secondItem="4My-21-zu8" secondAttribute="top" constant="12" id="PiU-wf-8QG"/>
+                            <constraint firstItem="HDf-Ok-rFJ" firstAttribute="top" secondItem="4My-21-zu8" secondAttribute="top" id="h3C-8z-jY6"/>
+                            <constraint firstAttribute="trailing" secondItem="0EX-ck-Nh9" secondAttribute="trailing" constant="12" id="onu-U8-UAw"/>
+                            <constraint firstAttribute="trailing" secondItem="HDf-Ok-rFJ" secondAttribute="trailing" id="rii-U3-qy0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="4My-21-zu8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RRq-av-l6l"/>
+                <constraint firstItem="4My-21-zu8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vbl-n0-4U3"/>
+                <constraint firstAttribute="trailing" secondItem="4My-21-zu8" secondAttribute="trailing" id="WoT-OH-cEG"/>
+                <constraint firstAttribute="bottom" secondItem="4My-21-zu8" secondAttribute="bottom" id="l0w-nh-3KW"/>
+            </constraints>
+            <size key="customSize" width="220" height="205"/>
+            <connections>
+                <outlet property="cameraIconImageView" destination="27r-Ik-hxB" id="o7l-lf-pYr"/>
+                <outlet property="countLabel" destination="98C-gx-LXa" id="ArN-7t-vFh"/>
+                <outlet property="countView" destination="0EX-ck-Nh9" id="3Ip-wV-anb"/>
+                <outlet property="photoImageView" destination="HDf-Ok-rFJ" id="V6s-oP-3zX"/>
+            </connections>
+            <point key="canvasLocation" x="131.29770992366412" y="74.295774647887328"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
