@@ -71,6 +71,11 @@
 ## [CMC 1차세션](https://eigen.tistory.com/13?category=1061933)
 ## [CMC 2차세션](https://eigen.tistory.com/21?category=1061933)
 
+# CS 스터디
+
+## [Linked List와 Array, 그리고 Swift에서의 Array](https://eigen.tistory.com/133)
+## [Queue와 Stack](https://eigen.tistory.com/134)
+
 # 💯 Algorithm 연습
 
 ## 프로그래머스LEVEL1
