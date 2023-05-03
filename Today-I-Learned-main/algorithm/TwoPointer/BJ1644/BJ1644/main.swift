@@ -13,17 +13,17 @@ func solution(){
     var sum = 0
     var R = 0
     var answer = 0
-    print(arr)
+    //print(arr)
     for left in 0..<arr.count{
         
         
-        while(sum + arr[R] < N && R < arr.count){
+        while(R < arr.count && sum + arr[R] <= N){
             
             sum += arr[R]
             R += 1
             
         }
-       print(sum)
+       //print("sum : \(sum)")
         if sum == N{
             answer += 1
         }
@@ -42,7 +42,8 @@ func createSosu(k: Int) -> [Int] {
     isPrime[0] = false
     isPrime[1] = false
 
-    let max = Int(sqrt(Double(k)))
+    var max = Int(sqrt(Double(k)))
+    if max < 2 { max = 2 }
     for i in 2...max {
         if isPrime[i] {
             for j in stride(from: i * i, through: k, by: i) {
