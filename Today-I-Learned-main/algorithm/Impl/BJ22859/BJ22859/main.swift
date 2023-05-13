@@ -95,17 +95,18 @@ solution()
 
 
 func parseHTML(_ html: String) {
-    // Remove main tags and split divs
-    let cleanedHTML = html.replacingOccurrences(of: "<main>", with: "").replacingOccurrences(of: "</main>", with: "")
-    let divs = cleanedHTML.components(separatedBy: "<div")
-
-    for div in divs {
+    let html = html.replacingOccurrences(of: "<main>", with: "").replacingOccurrences(of: "</main>", with: "")
+    let divs = html.components(separatedBy: "<div ")
+    
+    for var div in divs {
         if div.isEmpty { continue }
         
         // Extract title
-        if let titleRange = div.range(of: "title=\"(.*)\">", options: .regularExpression) {
-            let title = String(div[titleRange].dropFirst(7).dropLast(2))
+        if let titleEndIndex = div.firstIndex(of: ">") {
+            let titleStartIndex = div.index(div.startIndex, offsetBy: 6)
+            let title = String(div[titleStartIndex..<titleEndIndex])
             print("title : \(title)")
+            div.removeSubrange(div.startIndex...titleEndIndex)
         }
 
         // Extract and clean paragraphs
@@ -114,10 +115,14 @@ func parseHTML(_ html: String) {
             if paragraph.isEmpty { continue }
             
             // Remove tags
-            paragraph = paragraph.replacingOccurrences(of: "<.*?>", with: "", options: .regularExpression)
+            while let start = paragraph.firstIndex(of: "<"), let end = paragraph.firstIndex(of: ">") {
+                paragraph.removeSubrange(start...end)
+            }
             
             // Replace multiple spaces with single space
-            paragraph = paragraph.replacingOccurrences(of: " +", with: " ", options: .regularExpression)
+            while let range = paragraph.range(of: "  ") {
+                paragraph = paragraph.replacingCharacters(in: range, with: " ")
+            }
             
             // Remove trailing spaces
             paragraph = paragraph.trimmingCharacters(in: .whitespaces)
@@ -126,7 +131,9 @@ func parseHTML(_ html: String) {
         }
     }
 }
+//let html = "<main><div title=\"title_name_1\"><p>paragraph 1</p><p>paragraph 2 <i>Italic Tag</i> <br > </p><p>paragraph 3 <b>Bold Tag</b> end.</p></div><div title=\"title_name_2\"><p>paragraph 4</p><p>paragraph 5 <i>Italic Tag 2</i> <br > end.</p></div></main>"
 
-let html = "<main><div title=\"title_name_1\"><p>paragraph 1</p><p>paragraph 2 <i>Italic Tag</i> <br > </p><p>paragraph 3 <b>Bold Tag</b> end.</p></div><div title=\"title_name_2\"><p>paragraph 4</p><p>paragraph 5 <i>Italic Tag 2</i> <br > end.</p></div></main>"
+
+
 
 //parseHTML(html)
