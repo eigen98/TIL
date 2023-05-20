@@ -24,52 +24,61 @@
  */
 import Foundation
 
+var tree : Node = Node(num: 0, left: nil, right: nil)
 func solution(){
    var inputArr = [Int]()
     while let input = readLine(), let num = Int(input){
         inputArr.append(num)
     }
+    //루트
+    tree = Node(num: inputArr[0], left: nil, right: nil)
     
-    var tree = Tree(node: inputArr[0])
     for i in 1..<inputArr.count{
-        tree.add(node: inputArr[i])
-    }
-    
-    
-    func dfs(start : Int){
+        let num = inputArr[i]
         
-        dfs(start: )
+        dfs(input: num, nod: tree)
+    }
+
+    printDFS(root: tree)
+}
+func dfs(input : Int, nod : Node){
+    var root = nod
+    if input < root.num{
+        if let left = root.left{
+            dfs(input: input, nod: left)
+        }else{
+            root.left = Node(num: input, left: nil, right: nil)
+        }
+    }else{
+        if let right = root.right{
+            dfs(input: input, nod: right)
+        }else{
+            root.right = Node(num: input, left: nil, right: nil)
+        }
     }
 }
 
-
-class Tree {
-    var node : Int
-    var left : Tree?
-    var right : Tree?
+func printDFS(root : Node){
     
-    init(node: Int, left: Tree? = nil, right: Tree? = nil) {
-        self.node = node
+    if root.left != nil{
+        printDFS(root: root.left!)
+    }
+    if root.right != nil{
+        printDFS(root: root.right!)
+    }
+    
+    print(root.num)
+}
+
+class Node{
+    var num : Int
+    var left : Node?
+    var right : Node?
+    init(num : Int, left : Node?, right: Node?){
+        self.num = num
         self.left = left
         self.right = right
     }
-    
-    func add(node: Int){
-        if self.node < node{
-            if left != nil {
-                left?.add(node: node)
-            }else{
-                left = Tree(node: node)
-            }
-        }else{
-            if right != nil {
-                right?.add(node: node)
-            }else{
-                right = Tree(node: node)
-            }
-        }
-    }
-    
-    
-    
 }
+
+solution()
